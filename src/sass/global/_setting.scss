@@ -2,21 +2,34 @@
 @use "sass:map";
 
 // インナー幅
-$innerWidth: 1024px;
+$innerWidth: 1000px;
 
 // 余白
 $padding-pc: 25px;
-$padding-sp: 20px;
+$padding-sp: 15px;
 
 // フォント
-$font-main: "Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;;
-$font-sub: "Roboto Condensed", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, system-ui;
+$font-main: "Zen Maru Gothic", sans-serif;
+$font-sub: "Noto Sans JP", sans-serif;
 
 // 色指定
-$black: #333;
-$white: #fff;
-$red: #E83836;
-$blue: #007bff;
+$pink: #CC5C89;
+$pink02: #f3b3cf;
+$pink03: #ffd5db;
+$pink04: #cc5c89;
+$pink05: #b03f74;
+$lightpink: #fbebed;
+$lightpink02: #fdf7f8;
+$yellow: #ccaf3a;
+$yellow02: #fcee7b;
+$yellow03: #fff49c;
+$black: #3e3b35;
+$black: #000000;
+$white: #ffffff;
+$green: #00b900;
+$blue: #81c7c7;
+$lightblue: #d8f5f5;
+$lightblue02: #f8fdfd;
 
 // フォントウェイト
 $font-weights: (
