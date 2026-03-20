@@ -3,14 +3,13 @@
 .c-hexagon-card {
   width: rem(108);
   aspect-ratio: 1 / 1;
-  background: $pink;
 }
 
 /* 六角形 */
 .c-hexagon-card__inner {
   width: 100%;
   height: 100%;
-  /* ピンク系 */
+  background: $pink;
   clip-path: polygon(25% 0%,
       75% 0%,
       100% 50%,
