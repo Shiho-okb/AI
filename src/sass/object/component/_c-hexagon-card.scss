@@ -4,6 +4,10 @@
   width: rem(108);
   height: rem(94);
   aspect-ratio: 1 / 1;
+  @include mq(md) {
+    width: rem(136);
+    height: rem(119);
+  }
 }
 
 /* 六角形 */
@@ -24,6 +28,9 @@
   justify-content: center;
   text-align: center;
   padding: rem(20) rem(15) rem(15);
+  @include mq(md) {
+    padding: rem(23) rem(15) rem(15);
+  }
 }
 
 /* テキスト全体 */
@@ -32,6 +39,9 @@
   line-height: 1.4;
   letter-spacing: 0;
   color: $white;
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .c-hexagon-card__bold {
@@ -39,23 +49,28 @@
   letter-spacing: -.075em;
   font-weight: 900;
   color: #f5e27a;
+  @include mq(md) {
+    font-size: rem(22);
+  }
 }
 
 .c-hexagon-card__bottom {
   font-size: calc(14 / 375 * 100vw);
+  @include mq(md) {
+    font-size: rem(17);
+  }
 }
 
 /* 2番目のカード */
 .c-hexagon-card--time .c-hexagon-card__inner {
   padding: rem(14) rem(15) rem(15);
+  @include mq(md) {
+    padding: rem(18) rem(15) rem(15);
+  }
 }
 
 .c-hexagon-card--time .c-hexagon-card__text {
   line-height: 1.3;
-}
-
-.c-hexagon-card--time .c-hexagon-card__bold {
-  font-size: calc(15 / 375 * 100vw);
 }
 
 .c-hexagon-card--time .c-hexagon-card__label {
@@ -63,6 +78,9 @@
   text-orientation: upright;
   font-size: calc(12 / 375 * 100vw);
   letter-spacing: 0.014em;
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 .c-hexagon-card--time .c-hexagon-card__num {
@@ -70,20 +88,33 @@
   letter-spacing: -.05em;
   line-height: 1;
   padding-right: rem(3);
+  @include mq(md) {
+    font-size: rem(42);
+  }
 }
 
 .c-hexagon-card--time .c-hexagon-card__unit {
+  font-size: calc(15 / 375 * 100vw);
   position: relative;
   top: -0.2em;
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .c-hexagon-card--time .c-hexagon-card__bottom {
   font-size: calc(14 / 375 * 100vw);
+  @include mq(md) {
+    font-size: rem(17);
+  }
 }
 
 /* 3番目のカード */
 .c-hexagon-card--pain .c-hexagon-card__inner {
   padding: rem(23) rem(15) rem(15);
+  @include mq(md) {
+    padding: rem(28) rem(15) rem(15);
+  }
 }
 
 .c-hexagon-card--pain .c-hexagon-card__text {
@@ -93,16 +124,25 @@
 .c-hexagon-card--pain .c-hexagon-card__top {
   font-size: calc(12 / 375 * 100vw);
   letter-spacing: -.1em;
+  @include mq(md) {
+    font-size: rem(15);
+  }
 }
 
 .c-hexagon-card--pain .c-hexagon-card__bold {
   font-size: calc(19 / 375 * 100vw);
   letter-spacing: -.1em;
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 
 .p-hexagon-card {
   display: flex;
   justify-content: center;
   gap: rem(10);
-  max-width: rem(707); //あとで確認
+  // max-width: rem(707); //あとで確認
+  @include mq(md) {
+    gap: rem(12);
+  }
 }
