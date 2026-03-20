@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.c-hexagon-card {
+  width: rem(108);
+  aspect-ratio: 1 / 1;
+  background: $pink;
+}
+
+/* 六角形 */
+.c-hexagon-card__inner {
+  width: 100%;
+  height: 100%;
+  /* ピンク系 */
+  clip-path: polygon(25% 0%,
+      75% 0%,
+      100% 50%,
+      75% 100%,
+      25% 100%,
+      0% 50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* テキスト全体 */
+.c-hexagon-card__text {
+  font-size: calc(13 / 375 * 100vw);
+  line-height: calc(14 / 13);
+  letter-spacing: 0;
+}
+
+/* 上段 */
+.c-hexagon-card__main {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* 中段 */
+.c-hexagon-card__sub {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* 下段 */
+.c-hexagon-card__bottom {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.c-hexagon-card__yellow {
+  color: #f5e27a;
+  font-size: calc(17 / 375 * 100vw);
+  line-height: calc(14 / 17);
+  letter-spacing: -.075em;
+  font-weight: 900;
+}
+
+.p-hexagon-card {
+  display: flex;
+  justify-content: center;
+  gap: rem(10);
+  max-width: rem(707);
+}
