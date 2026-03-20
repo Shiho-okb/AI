@@ -4,9 +4,12 @@
   width: rem(191);
   aspect-ratio: 1 / 1;
   margin: 0 auto;
+  @include mq(md) {
+    width: rem(244);
+    margin: 0;
+  }
 }
 
-/* 円 */
 .c-chart__inner {
   width: 100%;
   height: 100%;
@@ -22,12 +25,20 @@
   justify-content: center;
   text-align: center;
   position: relative;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  @include mq(md) {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .c-chart__label {
   position: absolute;
   top: rem(31);
   left: rem(29);
+  @include mq(md) {
+    top: rem(45);
+    left: rem(38);
+  }
 }
 
 .c-chart__label-bg {
@@ -40,6 +51,11 @@
   background: $white;
   color: $black;
   padding-inline: rem(17) rem(9);
+  @include mq(md) {
+    font-size: rem(13);
+    line-height: calc(18 / 13);
+    padding-inline: rem(23) rem(16);
+  }
 }
 
 .c-chart__label-text {
@@ -61,9 +77,13 @@
     0 -1px 1px $white;
   top: rem(-11);
   left: rem(-10);
+  @include mq(md) {
+    font-size: rem(27);
+    top: rem(-14);
+    left: rem(-12);
+  }
 }
 
-/* 数字部分 */
 .c-chart__main {
   display: flex;
   align-items: flex-end;
@@ -81,26 +101,37 @@
   letter-spacing: 0;
   font-weight: 900;
   margin-top: rem(25);
+  @include mq(md) {
+    text-shadow:
+      3px 3px 3px $white,
+      -3px 3px 3px $white,
+      3px -3px 3px $white,
+      -3px -3px 3px $white,
+      3px 0 3px $white,
+      -3px 0 3px $white,
+      0 3px 3px $white,
+      0 -3px 3px $white;
+    margin-top: rem(33);
+  }
 }
 
-.c-chart--second .c-chart__main {
-  color: $yellow04;
-}
-
-/* 89 */
 .c-chart__num {
   font-size: rem(61);
   line-height: 1;
+  @include mq(md) {
+    font-size: rem(78);
+  }
 }
 
-/* % */
 .c-chart__percent {
   font-size: rem(31);
   line-height: 1;
   margin-bottom: rem(5);
+  @include mq(md) {
+    font-size: rem(40);
+  }
 }
 
-/* 下テキスト */
 .c-chart__sub {
   font-size: rem(12);
   letter-spacing: 0;
@@ -108,10 +139,84 @@
   color: $white;
   line-height: calc(16 / 12);
   text-align: right;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: calc(20 / 16);
+  }
 }
 
 .c-chart__sub-bold {
   font-size: rem(21);
+  @include mq(md) {
+    font-size: rem(27);
+  }
+}
+
+/*-------------------------------------------
+2番目のチャート
+-------------------------------------------*/
+.c-chart--second {
+  @include mq(md) {
+    width: rem(272);
+  }
+}
+
+.c-chart--second .c-chart__inner {
+  background:
+    conic-gradient(
+      $pink 0% 93%, /* メイン（93%） */
+      $darkpink 93% 100% /* 残り（7%） */
+    );
+}
+
+.c-chart--second .c-chart__label {
+  @include mq(md) {
+    top: rem(55);
+    left: rem(48);
+  }
+}
+
+.c-chart--second .c-chart__label-bg {
+  @include mq(md) {
+    font-size: rem(17);
+    line-height: calc(23 / 17);
+    padding-inline: rem(30) rem(14);
+  }
+}
+
+.c-chart--second .c-chart__label-num {
+  @include mq(md) {
+    font-size: rem(34);
+    top: rem(-16);
+    left: rem(-17);
+  }
+}
+
+.c-chart--second .c-chart__main {
+  color: $yellow04;
+  text-shadow:
+    4px 4px 4px $white,
+    -4px 4px 4px $white,
+    4px -4px 4px $white,
+    -4px -4px 4px $white,
+    4px 0 4px $white,
+    -4px 0 4px $white,
+    0 4px 4px $white,
+    0 -4px 4px $white;
+  margin-top: rem(47);
+  margin-right: rem(10);
+}
+
+.c-chart--second .c-chart__num {
+  @include mq(md) {
+    font-size: rem(88);
+  }
+}
+
+.c-chart--second .c-chart__percent {
+  @include mq(md) {
+    font-size: rem(49);
+  }
 }
 
 .p-chart {
@@ -120,7 +225,7 @@
   gap: rem(13);
   @include mq(md) {
     flex-direction: row;
-    justify-content: center;
-    gap: rem(66);
+    align-items: flex-end;
+    gap: rem(27);
   }
 }
