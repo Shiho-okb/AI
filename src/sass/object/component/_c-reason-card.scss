@@ -5,18 +5,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px; //最後に消す
-}
-
-.c-reason-card__image {
-  width: rem(250);
-}
-
-.c-reason-card__image img {
-  aspect-ratio: 250/160;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  margin-top: rem(42);
+  padding-top: rem(160);
+  @include mq(md) {
+  margin-top: 0;
+  padding-top: 0;
+  }
 }
 
 .c-reason-card__body {
@@ -26,6 +20,14 @@
   outline: 1px solid $pink02;
   outline-offset: rem(2);
   margin-top: rem(16);
+  @include mq(md) {
+    padding: rem(27) rem(14) rem(23) rem(14);
+    outline-offset: rem(5);
+    display: grid;
+    grid-template-columns: 1fr rem(170);
+    gap: rem(15);
+    align-items: center;
+  }
 }
 
 .c-reason-card__body::before,
@@ -37,14 +39,47 @@
   height: rem(4);
   background: $pink02;
   z-index: 10;
+  @include mq(md) {
+    top: rem(-6);
+    height: rem(6);
+  }
 }
 
 .c-reason-card__body::before {
   left: rem(10);
+  @include mq(md) {
+    left: rem(16);
+  }
 }
 
 .c-reason-card__body::after {
-  left: rem(134);
+  left: rem(216);
+}
+
+.c-reason-card__image {
+  position: absolute;
+  top: rem(-176);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(250);
+  @include mq(md) {
+    top: rem(7);
+    left: rem(81);
+    grid-column: 2;
+    grid-row: 1;
+    width: rem(170);
+    margin-top: 0;
+  }
+}
+
+.c-reason-card__image img {
+  aspect-ratio: 250/160;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 170/210;
+  }
 }
 
 .c-reason-card__en {
@@ -58,6 +93,12 @@
   background: $white;
   padding: 0 rem(60) 0 rem(9);
   z-index: 20;
+  @include mq(md) {
+    font-size: rem(19);
+    top: rem(-16);
+    left: rem(17);
+    padding: 0 rem(101) 0 rem(13);
+  }
 }
 
 .c-reason-card__head {
@@ -68,6 +109,10 @@
   top: rem(-47);
   left: rem(73);
   z-index: 20;
+  @include mq(md) {
+    top: rem(-69);
+    left: rem(115);
+  }
 }
 
 .c-reason-card__num {
@@ -76,17 +121,30 @@
   line-height: calc(64 / 40);
   font-style: italic;
   color: #d4bb58;
+  @include mq(md) {
+    font-size: rem(59);
+    line-height: calc(89 / 59);
+  }
 }
 
 .c-reason-card__num-end {
   font-size: rem(54);
   line-height: calc(64 / 54);
+  @include mq(md) {
+    font-size: rem(77);
+    line-height: calc(89 / 77);
+  }
 }
 
 .c-reason-card__title {
   font-size: rem(18);
   font-weight: 900;
   line-height: calc(24 / 18);
+  @include mq(md) {
+    grid-column: 1;
+    font-size: rem(22);
+    line-height: calc(30 / 22);
+  }
 }
 
 .c-reason-card__title-accent {
@@ -100,13 +158,28 @@
   letter-spacing: 0;
   color: $black;
   margin-top: rem(14);
+  @include mq(md) {
+    grid-column: 1;
+    line-height: calc(23 / 16);
+    margin-top: 0;
+  }
 }
 
 .c-reason-card__marker {
   background: linear-gradient(transparent 60%, #fdf4a7 60%);
 }
 
-.p-reason-card__inner {
+.p-reason-card__wrapper {
   padding-left: rem(18);
   padding-right: rem(18);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(61) rem(31);
+    background-color: #00bcd4;
+    border: 4px solid $pink;
+    padding-left: rem(33);
+    padding-right: rem(33);
+    padding-top: rem(62);
+  }
 }
