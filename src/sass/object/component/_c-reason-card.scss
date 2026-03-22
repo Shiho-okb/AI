@@ -16,7 +16,7 @@
 
 .c-reason-card__body {
   position: relative;
-  padding: rem(15) rem(9) rem(13);
+  padding: rem(15) rem(9) rem(15);
   border: 1px solid $pink02;
   outline: 1px solid $pink02;
   outline-offset: rem(2);
@@ -56,7 +56,10 @@
 }
 
 .c-reason-card__body::after {
-  left: rem(216);
+  left: rem(134);
+  @include mq(md) {
+    left: rem(216);
+  }
 }
 
 .c-reason-card__image {
@@ -194,6 +197,38 @@
 .c-reason-card__marker {
   background: linear-gradient(transparent 60%, #fdf4a7 60%);
 }
+
+/*-------------------------------------------
+偶数番目のカード
+-------------------------------------------*/
+.c-reason-card:nth-child(even) .c-reason-card__en {
+  left: rem(173);
+  @include mq(md) {
+    left: rem(17);
+  }
+}
+
+.c-reason-card:nth-child(even) .c-reason-card__head {
+  left: rem(236);
+  @include mq(md) {
+    left: rem(117);
+  }
+}
+
+.c-reason-card:nth-child(even) .c-reason-card__body::before {
+  left: rem(172);
+  @include mq(md) {
+    left: rem(16);
+  }
+}
+
+.c-reason-card:nth-child(even) .c-reason-card__body::after {
+  left: rem(296);
+  @include mq(md) {
+    left: rem(216);
+  }
+}
+
 
 .p-reason-card__wrapper {
   padding-left: rem(18);
