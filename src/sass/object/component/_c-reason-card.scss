@@ -7,6 +7,7 @@
   align-items: center;
   margin-top: rem(42);
   padding-top: rem(160);
+  counter-increment: reason;
   @include mq(md) {
   margin-top: 0;
   padding-top: 0;
@@ -25,8 +26,10 @@
     outline-offset: rem(5);
     display: grid;
     grid-template-columns: 1fr rem(170);
+    grid-template-rows: auto 1fr;
     gap: rem(15);
-    align-items: center;
+    align-items: start;
+    min-height: rem(264);
   }
 }
 
@@ -66,7 +69,7 @@
     top: rem(7);
     left: rem(81);
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 1 / 2;
     width: rem(170);
     margin-top: 0;
   }
@@ -111,29 +114,50 @@
   z-index: 20;
   @include mq(md) {
     top: rem(-69);
-    left: rem(115);
+    left: rem(117);
   }
 }
 
 .c-reason-card__num {
   font-family: "Shippori Mincho", serif;
-  font-size: rem(40);
-  line-height: calc(64 / 40);
   font-style: italic;
   color: #d4bb58;
+}
+
+.c-reason-card__num-zero {
+  font-size: rem(40);
+  line-height: calc(64 / 40);
+  letter-spacing: rem(-4);
   @include mq(md) {
     font-size: rem(59);
     line-height: calc(89 / 59);
   }
 }
 
-.c-reason-card__num-end {
+.c-reason-card__num-main {
   font-size: rem(54);
   line-height: calc(64 / 54);
+  counter-increment: number 1;
+  content: counter(number, decimal-leading-zero);
   @include mq(md) {
     font-size: rem(77);
     line-height: calc(89 / 77);
   }
+}
+
+/* 01の「1」の部分 */
+.c-reason-card__num-main::before {
+  content: counter(reason);
+}
+
+/* 01の「0」の部分（1桁の時だけ表示） */
+.c-reason-card__num-zero::before {
+  content: "0";
+}
+
+/* 10以上は0を消す */
+.c-reason-card:nth-child(n+10) .c-reason-card__num-zero {
+  display: none;
 }
 
 .c-reason-card__title {
@@ -142,6 +166,7 @@
   line-height: calc(24 / 18);
   @include mq(md) {
     grid-column: 1;
+    grid-row: 1;
     font-size: rem(22);
     line-height: calc(30 / 22);
   }
@@ -160,6 +185,7 @@
   margin-top: rem(14);
   @include mq(md) {
     grid-column: 1;
+    grid-row: 2;
     line-height: calc(23 / 16);
     margin-top: 0;
   }
@@ -172,6 +198,7 @@
 .p-reason-card__wrapper {
   padding-left: rem(18);
   padding-right: rem(18);
+  counter-reset: reason;
   @include mq(md) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
