@@ -194,17 +194,19 @@
 
 .c-chart--second .c-chart__main {
   color: $yellow04;
-  text-shadow:
-    4px 4px 4px $white,
-    -4px 4px 4px $white,
-    4px -4px 4px $white,
-    -4px -4px 4px $white,
-    4px 0 4px $white,
-    -4px 0 4px $white,
-    0 4px 4px $white,
-    0 -4px 4px $white;
-  margin-top: rem(47);
-  margin-right: rem(10);
+  @include mq(md) {
+    text-shadow:
+      4px 4px 4px $white,
+      -4px 4px 4px $white,
+      4px -4px 4px $white,
+      -4px -4px 4px $white,
+      4px 0 4px $white,
+      -4px 0 4px $white,
+      0 4px 4px $white,
+      0 -4px 4px $white;
+    margin-top: rem(47);
+    margin-right: rem(10);
+  }
 }
 
 .c-chart--second .c-chart__num {

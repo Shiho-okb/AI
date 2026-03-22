@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.c-reason-card {
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px; //最後に消す
+}
+
+.c-reason-card__image {
+  width: rem(250);
+}
+
+.c-reason-card__image img {
+  aspect-ratio: 250/160;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.c-reason-card__body {
+  position: relative;
+  padding: rem(15) rem(9) rem(13);
+  border: 1px solid $pink02;
+  outline: 1px solid $pink02;
+  outline-offset: rem(2);
+  margin-top: rem(16);
+}
+
+.c-reason-card__body::before,
+.c-reason-card__body::after {
+  content: "";
+  position: absolute;
+  top: rem(-4);
+  width: 1px;
+  height: rem(4);
+  background: $pink02;
+  z-index: 10;
+}
+
+.c-reason-card__body::before {
+  left: rem(10);
+}
+
+.c-reason-card__body::after {
+  left: rem(134);
+}
+
+.c-reason-card__en {
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(12);
+  line-height: 1;
+  color: $black;
+  position: absolute;
+  top: rem(-8);
+  left: rem(11);
+  background: $white;
+  padding: 0 rem(60) 0 rem(9);
+  z-index: 20;
+}
+
+.c-reason-card__head {
+  display: flex;
+  align-items: flex-end;
+  gap: rem(8);
+  position: absolute;
+  top: rem(-47);
+  left: rem(73);
+  z-index: 20;
+}
+
+.c-reason-card__num {
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(40);
+  line-height: calc(64 / 40);
+  font-style: italic;
+  color: #d4bb58;
+}
+
+.c-reason-card__num-end {
+  font-size: rem(54);
+  line-height: calc(64 / 54);
+}
+
+.c-reason-card__title {
+  font-size: rem(18);
+  font-weight: 900;
+  line-height: calc(24 / 18);
+}
+
+.c-reason-card__title-accent {
+  color: $pink;
+  background: linear-gradient(transparent 60%, $lightpink 60%);
+}
+
+.c-reason-card__text {
+  font-size: rem(16);
+  line-height: calc(22 / 16);
+  letter-spacing: 0;
+  color: $black;
+  margin-top: rem(14);
+}
+
+.c-reason-card__marker {
+  background: linear-gradient(transparent 60%, #fdf4a7 60%);
+}
+
+.p-reason-card__inner {
+  padding-left: rem(18);
+  padding-right: rem(18);
+}
