@@ -1,0 +1,193 @@
+@use "global" as *;
+
+.c-fee-card__lead {
+  font-weight: 900;
+  letter-spacing: 0;
+  text-align: center;
+  position: relative;
+}
+
+.c-fee-card__lead::before,
+.c-fee-card__lead::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  width: rem(1);
+  height: rem(15);
+  background-color: $black;
+  transform-origin: center;
+  @include mq(md) {
+  }
+}
+
+.c-fee-card__lead::before {
+  left: rem(105);
+  transform: translateY(-50%) rotate(-22deg);
+  @include mq(md) {
+    // left: rem(-15);
+    // transform: translateY(-50%) rotate(-32deg);
+  }
+}
+
+.c-fee-card__lead::after {
+  right: rem(105);
+  transform: translateY(-50%) rotate(22deg);
+  @include mq(md) {
+    // right: rem(-15);
+    // transform: translateY(-50%) rotate(32deg);
+  }
+}
+
+.c-fee-card {
+  border: 3px solid #c06a86;
+  border-radius: rem(15);
+  padding: rem(15) rem(12) rem(22);
+  text-align: center;
+  background: $white;
+  position: relative;
+  margin-top: rem(19);
+}
+
+/* リボン */
+.c-fee-card__ribbon {
+  position: absolute;
+  top: rem(-18);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(315);
+  height: rem(33);
+  line-height: rem(33);
+  text-align: center;
+  font-size: rem(18);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  background: $pink;
+  color: $white;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    95% 50%,
+    100% 100%,
+    0 100%,
+    5% 50%);
+}
+
+/* タグ */
+.c-fee-card__tags {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: rem(7) rem(6);
+  margin-top: rem(30);
+}
+
+.c-fee-card__tags span {
+  background: $pink03;
+  border-radius: rem(11);
+  font-size: rem(14);
+  font-weight: 900;
+  width: rem(74);
+  padding-block: 0 rem(2);
+}
+
+/* 価格エリア */
+.c-fee-card__price-area {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: rem(5);
+}
+
+/* バッジ */
+.c-fee-card__badge {
+  width: rem(66);
+  height: rem(66);
+  background-image: url("/images/cta/cta_01.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: rem(14);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.c-fee-card__badge-top {
+  display: flex;
+  align-items: baseline;
+}
+
+.c-fee-card__badge-num {
+  font-size: rem(24);
+}
+
+.c-fee-card__badge-bottom {
+  margin-bottom: rem(6);
+}
+
+/* 金額 */
+.c-fee-card__monthly {
+  display: flex;
+  align-items: center;
+  color: $pink;
+}
+
+.c-fee-card__month {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: rem(20);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: calc(28 / 20);
+  margin: rem(6) 0 0 rem(9);
+}
+
+.c-fee-card__amount {
+  font-size: rem(54);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: calc(90 / 54);
+}
+
+.c-fee-card__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(5);
+  margin: rem(7) 0 0 rem(19);
+}
+
+.c-fee-card__tax {
+  font-size: rem(10);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.c-fee-card__yen {
+  font-size: rem(26);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+/* 総額 */
+.c-fee-card__total {
+  font-size: rem(16);
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: rem(-17) 0 0 rem(5);
+}
+
+.c-fee-card-total__yen {
+  font-size: rem(22);
+}
+
+.c-fee-card-total__tax {
+  font-size: rem(12);
+}
