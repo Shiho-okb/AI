@@ -41,7 +41,7 @@
 .c-fee-card {
   border: 3px solid #c06a86;
   border-radius: rem(15);
-  padding: rem(15) rem(12) rem(22);
+  padding: rem(15) rem(12) rem(24);
   text-align: center;
   background: $white;
   position: relative;
@@ -102,7 +102,7 @@
 .c-fee-card__badge {
   width: rem(66);
   height: rem(66);
-  background-image: url("/images/cta/cta_01.svg");
+  background-image: url("/images/fee/fee_01.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -190,4 +190,43 @@
 
 .c-fee-card-total__tax {
   font-size: rem(12);
+}
+
+/*-------------------------------------------
+2番目のカード
+-------------------------------------------*/
+.c-fee-card__lead--perfect {
+  margin-top: rem(34);
+}
+
+.c-fee-card__lead--perfect::before {
+  left: rem(63);
+  transform: translateY(-50%) rotate(-22deg);
+  @include mq(md) {
+    // left: rem(-15);
+  }
+}
+
+.c-fee-card__lead--perfect::after {
+  right: rem(66);
+  transform: translateY(-50%) rotate(22deg);
+  @include mq(md) {
+    // right: rem(-15);
+  }
+}
+
+.c-fee-card--perfect {
+  border: 3px solid $blue;
+}
+
+.c-fee-card--perfect .c-fee-card__ribbon {
+  background: $blue;
+}
+
+.c-fee-card--perfect .c-fee-card__tags span {
+  background: $lightblue;
+}
+
+.c-fee-card--perfect .c-fee-card__monthly {
+  color: $blue;
 }
