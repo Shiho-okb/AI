@@ -1,10 +1,14 @@
 @use "global" as *;
 
 .c-fee-card__lead {
+  font-size: rem(16);
   font-weight: 900;
   letter-spacing: 0;
   text-align: center;
   position: relative;
+  @include mq(md) {
+    font-size: rem(22);
+  }
 }
 
 .c-fee-card__lead::before,
@@ -17,35 +21,38 @@
   background-color: $black;
   transform-origin: center;
   @include mq(md) {
+    height: rem(22);
   }
 }
 
 .c-fee-card__lead::before {
-  left: rem(105);
+  left: 30%;
   transform: translateY(-50%) rotate(-22deg);
   @include mq(md) {
-    // left: rem(-15);
-    // transform: translateY(-50%) rotate(-32deg);
+    left: 39%;
   }
 }
 
 .c-fee-card__lead::after {
-  right: rem(105);
+  right: 30%;
   transform: translateY(-50%) rotate(22deg);
   @include mq(md) {
-    // right: rem(-15);
-    // transform: translateY(-50%) rotate(32deg);
+    right: 39%;
   }
 }
 
 .c-fee-card {
   border: 3px solid #c06a86;
   border-radius: rem(15);
-  padding: rem(15) rem(12) rem(24);
+  padding: rem(15) rem(12) rem(26);
   text-align: center;
   background: $white;
   position: relative;
   margin-top: rem(19);
+  @include mq(md) {
+    padding: rem(34) rem(28) rem(19);
+    margin-top: rem(34);
+  }
 }
 
 /* リボン */
@@ -70,6 +77,21 @@
     100% 100%,
     0 100%,
     5% 50%);
+  @include mq(md) {
+    top: rem(-34);
+    width: rem(528);
+    height: rem(68);
+    line-height: rem(68);
+    font-size: rem(40);
+  }
+}
+
+.c-fee-card__body {
+  margin-top: rem(30);
+  @include mq(md) {
+    display: flex;
+    margin-top: rem(14);
+  }
 }
 
 /* タグ */
@@ -78,7 +100,12 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: rem(7) rem(6);
-  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: 0;
+    width: 50%;
+    align-content: center;
+    gap: rem(11) rem(6);
+  }
 }
 
 .c-fee-card__tags span {
@@ -87,7 +114,15 @@
   font-size: rem(14);
   font-weight: 900;
   width: rem(74);
-  padding-block: 0 rem(2);
+  height: rem(22);
+  line-height: rem(22);
+  @include mq(md) {
+    border-radius: rem(14);
+    font-size: rem(17);
+    width: rem(100);
+    height: rem(30);
+    line-height: rem(30);
+  }
 }
 
 /* 価格エリア */
@@ -96,6 +131,9 @@
   align-items: center;
   justify-content: flex-start;
   margin-left: rem(5);
+  @include mq(md) {
+    margin-left: rem(13);
+  }
 }
 
 /* バッジ */
@@ -115,15 +153,27 @@
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.12em;
+  @include mq(md) {
+    width: rem(94);
+    height: rem(94);
+    font-size: rem(19);
+  }
+
 }
 
 .c-fee-card__badge-top {
   display: flex;
   align-items: baseline;
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .c-fee-card__badge-num {
   font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(35);
+  }
 }
 
 .c-fee-card__badge-bottom {
@@ -135,6 +185,8 @@
   display: flex;
   align-items: center;
   color: $pink;
+  @include mq(md) {
+  }
 }
 
 .c-fee-card__month {
@@ -145,13 +197,21 @@
   letter-spacing: 0.1em;
   line-height: calc(28 / 20);
   margin: rem(6) 0 0 rem(9);
+  @include mq(md) {
+    font-size: rem(30);
+    letter-spacing: 0.021em;
+  }
 }
 
 .c-fee-card__amount {
   font-size: rem(54);
   font-weight: 900;
   letter-spacing: 0;
-  line-height: calc(90 / 54);
+  line-height: calc(91 / 54);
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: 1;
+  }
 }
 
 .c-fee-card__unit {
@@ -167,6 +227,9 @@
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1;
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .c-fee-card__yen {
@@ -174,6 +237,9 @@
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1;
+  @include mq(md) {
+    font-size: rem(48);
+  }
 }
 
 /* 総額 */
@@ -182,14 +248,24 @@
   font-weight: 900;
   letter-spacing: 0;
   margin: rem(-17) 0 0 rem(5);
+  @include mq(md) {
+    font-size: rem(20);
+    margin: 0 0 0 rem(5);
+  }
 }
 
 .c-fee-card-total__yen {
   font-size: rem(22);
+  @include mq(md) {
+    font-size: rem(26);
+  }
 }
 
 .c-fee-card-total__tax {
   font-size: rem(12);
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 /*-------------------------------------------
@@ -200,27 +276,37 @@
 }
 
 .c-fee-card__lead--perfect::before {
-  left: rem(63);
+  left: 18%;
   transform: translateY(-50%) rotate(-22deg);
   @include mq(md) {
-    // left: rem(-15);
+    left: 33%;
   }
 }
 
 .c-fee-card__lead--perfect::after {
-  right: rem(66);
+  right: 19%;
   transform: translateY(-50%) rotate(22deg);
   @include mq(md) {
-    // right: rem(-15);
+    right: 33%;
   }
 }
 
 .c-fee-card--perfect {
   border: 3px solid $blue;
+  margin-bottom: 100px; //あとで消す
+  @include mq(md) {
+    padding: rem(34) rem(28) rem(27);
+  }
 }
 
 .c-fee-card--perfect .c-fee-card__ribbon {
   background: $blue;
+}
+
+.c-fee-card--perfect .c-fee-card__tags {
+  @include mq(md) {
+    gap: rem(7) rem(6);
+  }
 }
 
 .c-fee-card--perfect .c-fee-card__tags span {
@@ -229,4 +315,11 @@
 
 .c-fee-card--perfect .c-fee-card__monthly {
   color: $blue;
+}
+
+.p-fee-card__wrapper {
+  @include mq(md) {
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
 }
