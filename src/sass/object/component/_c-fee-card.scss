@@ -90,21 +90,24 @@
   margin-top: rem(30);
   @include mq(md) {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: rem(14);
+    gap: rem(13);
   }
 }
 
 /* タグ */
 .c-fee-card__tags {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: rem(7) rem(6);
   @include mq(md) {
     margin-top: 0;
-    width: 50%;
-    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: rem(11) rem(6);
+    align-content: flex-start;
   }
 }
 
@@ -113,7 +116,7 @@
   border-radius: rem(11);
   font-size: rem(14);
   font-weight: 900;
-  width: rem(74);
+  width: 100%;
   height: rem(22);
   line-height: rem(22);
   @include mq(md) {
@@ -132,7 +135,9 @@
   justify-content: flex-start;
   margin-left: rem(5);
   @include mq(md) {
-    margin-left: rem(13);
+    margin-left: 0;
+    flex-shrink: 1;
+    min-width: 0;
   }
 }
 
@@ -211,6 +216,7 @@
   @include mq(md) {
     font-size: rem(80);
     line-height: 1;
+    flex-shrink: 0;
   }
 }
 
@@ -220,6 +226,7 @@
   align-items: center;
   gap: rem(5);
   margin: rem(7) 0 0 rem(19);
+  flex-shrink: 0;
 }
 
 .c-fee-card__tax {
