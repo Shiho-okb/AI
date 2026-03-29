@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.c-flow-card {
+  position: relative;
+  background: $white;
+  padding-bottom: rem(10);
+  border: 1px solid $yellow;
+  counter-increment: flow;
+  @include mq(md) {
+  }
+}
+
+.c-flow-card__ribbon {
+  display: flex;
+  align-items: center;
+  gap: rem(23);
+  z-index: 10;
+  transform: translate(-1px, -1px);
+}
+
+/* STEPラベル */
+.c-flow-card__step {
+  position: relative;
+  display: inline-block;
+  width: rem(104);
+  height: rem(34);
+  background: $pink;
+  color: $white;
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(11);
+  padding-left: rem(13);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  @include mq(md) {
+  }
+}
+
+.c-flow-card__num {
+  font-size: rem(26);
+  padding-left: rem(5);
+  letter-spacing: 0;
+}
+
+.c-flow-card__num::before {
+  counter-increment: number 1;
+  content: counter(flow, decimal-leading-zero);
+}
+
+.c-flow-card__num::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(7);
+  transform: translateY(-50%);
+  width: rem(9);
+  height: rem(1);
+  background: $white;
+}
+
+/* STEPの右の三角 */
+.c-flow-card__step::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(-16);
+  transform: translateY(-50%);
+  border-top: rem(17) solid transparent;
+  border-bottom: rem(17) solid transparent;
+  border-left: rem(16) solid $pink;
+}
+
+/* タイトル */
+.c-flow-card__title {
+  font-size: rem(17);
+  font-weight: 000;
+  color: #c6618c;
+  @include mq(md) {
+  }
+}
+
+.c-flow-card__text {
+  font-size: rem(16);
+  line-height: calc(22 / 16);
+  letter-spacing: 0;
+  margin-top: rem(4);
+  padding-inline: rem(13);
+  @include mq(md) {
+  }
+}
+
+.c-flow-card:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: rem(-31);
+  transform: translateX(-50%);
+  border-right: rem(20) solid transparent;
+  border-left: rem(20) solid transparent;
+  border-top: rem(16) solid $pink;
+}
+
+.p-flow-card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(46);
+  counter-reset: flow;
+}
