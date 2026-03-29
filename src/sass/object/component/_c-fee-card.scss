@@ -43,6 +43,7 @@
 
 .c-fee-card {
   border: 3px solid #c06a86;
+  background-color: $lightpink02;
   border-radius: rem(15);
   padding: rem(15) rem(12) rem(26);
   text-align: center;
@@ -300,7 +301,7 @@
 
 .c-fee-card--perfect {
   border: 3px solid $blue;
-  margin-bottom: 100px; //あとで消す
+  background-color: $lightblue02;
   @include mq(md) {
     padding: rem(34) rem(28) rem(27);
   }

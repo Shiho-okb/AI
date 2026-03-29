@@ -1,0 +1,58 @@
+@use "global" as *;
+
+.c-line-btn {
+  margin-top: 100px;
+  margin-bottom: 100px; //あとで消す
+}
+
+.c-line-btn a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: rem(270);
+  padding-block: rem(10) rem(7);
+  background: $green;
+  color: $white;
+  font-size: rem(16);
+  font-weight: 900;
+  line-height: calc(21 / 16);
+  letter-spacing: 0;
+  border-radius: rem(100);
+  box-shadow:
+    inset 0 4px 0 rgba(255, 255, 255, 0.4), /* 上のハイライト */
+    0 5px 0 #439121; /* 下の影 */
+  transition: 0.3s ease-in-out;
+  @include mq(md) {
+    width: rem(500);
+    padding-block: rem(18) rem(8);
+    font-size: rem(28);
+    line-height: calc(35 / 28);
+    box-shadow:
+      inset 0 7px 0 rgba(255, 255, 255, 0.4),
+      0 8px 0 #439121;
+  }
+}
+
+.c-line-btn a::after {
+  content: "";
+  position: absolute;
+  right: rem(34);
+  width: rem(18);
+  height: rem(24);
+  background: url('/images/fee/fee_02.svg') no-repeat center / contain;
+  @include mq(md) {
+    right: rem(58);
+    width: rem(30);
+    height: rem(42);
+  }
+}
+
+.c-line-btn a:hover {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    0 3px 0 #439121;
+}
