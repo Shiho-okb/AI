@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.c-difference-card {
+  margin-top: 50px; //あとで消す
+  padding-inline: rem(15);
+  padding-block: rem(8) rem(26);
+  background-color: $yellow03;
+}
+
+/* ラベル */
+.c-difference-card__label {
+  display: inline-block;
+  background: $blue;
+  color: $white;
+  font-size: rem(16);
+  font-weight: 900;
+  letter-spacing: 0;
+  padding-inline: rem(9);
+  height: rem(24);
+  line-height: rem(24);
+}
+
+.c-difference-card__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: rem(17);
+}
+
+/* 各イラスト */
+.c-difference-card__item {
+  width: 30%;
+  text-align: center;
+  position: relative;
+}
+
+/* 画像 */
+.c-difference-card__image {
+  width: rem(94);
+  height: rem(141);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.c-difference-card__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.c-difference-card__item:nth-child(1) .c-difference-card__image img {
+  aspect-ratio: 94/128;
+}
+
+.c-difference-card__item:nth-child(2) .c-difference-card__image img {
+  aspect-ratio: 94/100;
+}
+
+.c-difference-card__item:nth-child(3) .c-difference-card__image img {
+  aspect-ratio: 94/141;
+}
+
+/* テキスト */
+.c-difference-card__text {
+  font-family: $font-sub;
+  font-size: rem(10);
+  font-weight: 500;
+  letter-spacing: -.06em;
+  margin-top: rem(5);
+  line-height: calc(14 / 10);
+}
+
+/* 矢印 */
+.c-difference-card__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: rem(-12);
+  top: rem(93);
+  // transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: rem(6) solid transparent;
+  border-bottom: rem(6) solid transparent;
+  border-left: rem(7) solid #ffa5a5;
+}
