@@ -77,10 +77,22 @@
   position: absolute;
   right: rem(-12);
   top: rem(93);
-  // transform: translateY(-50%);
   width: 0;
   height: 0;
   border-top: rem(6) solid transparent;
   border-bottom: rem(6) solid transparent;
   border-left: rem(7) solid #ffa5a5;
+}
+
+
+/*-------------------------------------------
+2番目のカード
+-------------------------------------------*/
+.c-difference-card--medical {
+  padding-block: rem(8) rem(12);
+  margin-top: rem(25);
+}
+
+.c-difference-card--medical .c-difference-card__label {
+  background: $pink;
 }
