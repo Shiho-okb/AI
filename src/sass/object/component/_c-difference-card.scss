@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .c-difference-card {
-  margin-top: 25px; //あとで消す
+  margin-top: rem(25); //あとで消す
   padding-inline: rem(15);
   padding-block: rem(8) rem(26);
   background-color: $yellow03;
