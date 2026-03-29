@@ -14,8 +14,10 @@
   display: flex;
   align-items: center;
   gap: rem(23);
-  z-index: 10;
   transform: translate(-1px, -1px);
+  @include mq(md) {
+    gap: rem(46);
+  }
 }
 
 /* STEPラベル */
@@ -33,6 +35,10 @@
   display: flex;
   align-items: center;
   @include mq(md) {
+    width: rem(144);
+    height: rem(48);
+    font-size: rem(15);
+    padding-left: rem(20);
   }
 }
 
@@ -40,6 +46,11 @@
   font-size: rem(26);
   padding-left: rem(5);
   letter-spacing: 0;
+  @include mq(md) {
+    font-size: rem(40);
+    padding-bottom: rem(5);
+    line-height: 1;
+  }
 }
 
 .c-flow-card__num::before {
@@ -56,6 +67,9 @@
   width: rem(9);
   height: rem(1);
   background: $white;
+  @include mq(md) {
+    width: rem(13);
+  }
 }
 
 /* STEPの右の三角 */
@@ -68,14 +82,21 @@
   border-top: rem(17) solid transparent;
   border-bottom: rem(17) solid transparent;
   border-left: rem(16) solid $pink;
+  @include mq(md) {
+    right: rem(-21);
+    border-top: rem(24) solid transparent;
+    border-bottom: rem(24) solid transparent;
+    border-left: rem(22) solid $pink;
+  }
 }
 
 /* タイトル */
 .c-flow-card__title {
   font-size: rem(17);
-  font-weight: 000;
+  font-weight: 900;
   color: #c6618c;
   @include mq(md) {
+    font-size: rem(20);
   }
 }
 
@@ -86,6 +107,9 @@
   margin-top: rem(4);
   padding-inline: rem(13);
   @include mq(md) {
+    line-height: calc(28 / 16);
+    margin-top: 0;
+    padding-inline: rem(189) rem(18);
   }
 }
 
@@ -98,6 +122,12 @@
   border-right: rem(20) solid transparent;
   border-left: rem(20) solid transparent;
   border-top: rem(16) solid $pink;
+  @include mq(md) {
+    bottom: rem(-41);
+    border-right: rem(26) solid transparent;
+    border-left: rem(26) solid transparent;
+    border-top: rem(20) solid $pink;
+  }
 }
 
 .p-flow-card {
@@ -105,4 +135,7 @@
   flex-direction: column;
   gap: rem(46);
   counter-reset: flow;
+  @include mq(md) {
+    gap: rem(53.5);
+  }
 }
