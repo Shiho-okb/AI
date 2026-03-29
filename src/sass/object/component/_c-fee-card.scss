@@ -325,7 +325,7 @@
   color: $blue;
 }
 
-.p-fee-card__wrapper {
+.p-fee-card {
   @include mq(md) {
     padding-left: rem(50);
     padding-right: rem(50);
