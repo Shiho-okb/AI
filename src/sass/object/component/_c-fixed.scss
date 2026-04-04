@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.c-fixed {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity .5s ease;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* フェードインさせるクラス */
+.c-fixed.is-show {
+  opacity: 1;
+}
+
+.c-fixed__item {
+  height: rem(74);
+  border: 1.5px solid $white;
+  border-radius: rem(10) rem(10) 0 0;
+  display: inline-flex;
+  align-items: center;
+  color: $white;
+}
+
+.c-fixed__item--phonenumber {
+  width: 42%;
+  background-color: $pink;
+  padding-left: rem(25);
+}
+
+.c-fixed__phonenumber {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+}
+
+.c-fixed__phonenumber-img {
+  width: rem(18);
+}
+
+.c-fixed__phonenumber-img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 18 / 24;
+  object-fit: cover;
+}
+
+.c-fixed__text {
+  font-size: rem(19);
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.c-fixed__item--reservation {
+  width: 58%;
+  background-color: $green;
+  justify-content: center;
+  text-align: center;
+}
+
+.c-fixed__item--reservation a {
+  display: flex;
+  align-items: center;
+  font-size: rem(16);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: calc(22 / 16);
+}

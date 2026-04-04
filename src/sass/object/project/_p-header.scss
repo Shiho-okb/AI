@@ -1,0 +1,421 @@
+@use "global" as *;
+
+.p-header {
+  height: rem(60);
+  background: $pink;
+  @include mq(md) {
+    // height: rem(80);
+    // transition: .4s;
+  }
+  @include mq(xl) {
+    // height: calc(80 / 1400 * 100vw);
+  }
+}
+
+.p-header__inner {
+  padding-left: rem(15);
+  @include mq(md) {
+    // height: 100%;
+    // padding-left: 0;
+  }
+}
+
+.p-header__wrapper {
+  height: rem(60);
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    // height: 100%;
+    // align-items: center;
+  }
+}
+
+.p-header__logo {
+  font-family: "Shippori Mincho", serif;
+  color: $white;
+  font-size: rem(22);
+  letter-spacing: 0;
+  font-weight: 600;
+  height: inherit;
+  position: relative;
+  z-index: 300;
+  @include mq(md) {
+    // font-size: calc(28 / 1400 * 100vw);
+    // margin-left: auto;
+    // transition: .4s;
+  }
+}
+
+.p-header__logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.p-header__hamburger {
+  height: rem(60);
+  width: rem(58);
+  padding: rem(19) rem(15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 300;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__hamburger span {
+  width: 100%;
+  height: rem(2);
+  background-color: $white;
+  display: inline-block;
+  transform: translateY(0) rotate(0);
+  transition: transform ease-in-out .3s;
+}
+
+.p-header__hamburger.is-active span:nth-child(1) {
+  transform: translateY(rem(10)) rotate(45deg);
+}
+
+.p-header__hamburger.is-active span:nth-child(2) {
+  background-color: transparent;
+}
+
+.p-header__hamburger.is-active span:nth-child(3) {
+  transform: translateY(rem(-10)) rotate(-45deg);
+}
+
+
+/*-------------------------------------------
+ナビゲーション
+-------------------------------------------*/
+.p-header__nav {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: $blue;
+  top: rem(60);
+  left: 0;
+  z-index: 200;
+  // padding-block: rem(98) rem(20);
+  @include mq(md) {
+    // display: flex;
+    // position: static;
+    // height: inherit;
+    // width: calc(965 / 1400 * 100vw);
+    // padding: 0;
+    // align-items: center;
+    // background-color: transparent;
+    // justify-content: flex-end;
+  }
+}
+
+.p-header__nav-wrapper {
+  padding-inline: rem(36);
+  height: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: rem(600);
+  margin: 0 auto;
+  @include mq(md) {
+    // width: 100%;
+    // padding: 0;
+    // height: inherit;
+    // min-height: initial;
+    // overflow: initial;
+    // flex-direction: row;
+    // max-width: 100%;
+  }
+}
+
+.p-header__nav-list {
+  width: 100%;
+  margin-top: rem(55);
+  @include mq(md) {
+    // order: initial;
+    // display: flex;
+    // width: calc(583 / 965 * 100vw);
+    // height: inherit;
+    // justify-content: flex-end;
+    // margin-top: initial;
+  }
+}
+
+.p-header__nav-item {
+  width: 100%;
+  @include mq(md) {
+    // border-bottom: none;
+    // height: inherit;
+    // position: relative;
+    // display: flex;
+    // align-items: center;
+    // transition: .4s;
+    // width: auto;
+  }
+}
+
+.p-header__nav-item:not(:first-child)::before {
+  @include mq(md) {
+    // content: "";
+    // position: absolute;
+    // width: 1px;
+    // height: rem(16);
+    // background: $black;
+  }
+}
+
+.p-header-nav-item__link {
+  display: block;
+  padding: rem(3.5) rem(10);
+  font-size: rem(16);
+  line-height: calc(38 / 16);
+  letter-spacing: 0;
+  @include mq(md) {
+    // font-size: calc(16 / 1400 * 100vw);
+    // line-height: calc(16 / 16);
+    // letter-spacing: 0.1em;
+    // height: inherit;
+    // display: flex;
+    // align-items: center;
+    // padding: rem(28) calc(26 / 1400 * 100vw);
+    // transition: .4s;
+  }
+}
+
+.p-header-nav-item__link:hover {
+  @include mq(md) {
+    // color: $green;
+    // font-weight: bold;
+    // opacity: 1;
+  }
+}
+
+
+/*-------------------------------------------
+アコーディオン
+-------------------------------------------*/
+.p-header-nav-item__accordion {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba($blue, 0.4);
+  @include mq(md) {
+    // border-bottom: none;
+    // height: inherit;
+  }
+}
+
+.p-header-nav-item__accordion .p-header-nav-item__link {
+  width: 100%;
+}
+
+.p-header-nav-item__toggle {
+  position: relative;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header-nav-item__toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: solid 2px $green;
+  border-top: solid 2px $green;
+  height: rem(13);
+  width: rem(13);
+  right: rem(12);
+  top: 45%;
+  transform: translateY(-50%) rotate(135deg);
+  transition: transform .3s;
+}
+
+.p-header-nav-item__accordion.open .p-header-nav-item__toggle::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+
+.p-header__btnlist {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  width: 100%;
+  @include mq(md) {
+    // width: calc(382 / 965 * 100vw);
+    // flex-direction: row;
+    // height: inherit;
+    // gap: initial;
+    // height: 100%;
+  }
+}
+
+.p-header__btnitem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(10);
+  transition: all .3s;
+  @include mq(md) {
+    // height: inherit;
+    // border-radius: 0;
+  }
+}
+
+
+/*-------------------------------------------
+電話番号ボタン
+-------------------------------------------*/
+.p-header__btnitem--phonenumber {
+  color: #707070;
+  background: rgba($blue, 0.3);
+  @include mq(md) {
+    // width: calc(262 / 382 * 100%);
+    // color: $black;
+    // order: 1;
+    // height: inherit;
+  }
+}
+
+.p-header__btnitem--phonenumber a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(4) rem(55) rem(12) rem(54);
+  @include mq(md) {
+    // align-items: flex-end;
+    // padding: rem(20) calc(25 / 1400 * 100vw) rem(11) calc(25 / 1400 * 100vw);
+    // pointer-events: none;
+    // cursor: default;
+  }
+}
+
+.p-header__btnitem--phonenumber__textbox {
+  display: flex;
+  align-items: center;
+  gap: rem(9);
+  @include mq(md) {
+    // align-items: baseline;
+    // gap: 0;
+  }
+}
+
+.p-header__btnitem--phonenumber__text01 {
+  display: none;
+  @include mq(md) {
+    // display: block;
+    // font-size: calc(16 / 1400 * 100vw);
+    // line-height: calc(16 / 16);
+    // font-weight: bold;
+  }
+}
+
+.p-header__btnitem--phonenumber__text02 {
+  font-size: rem(26);
+  font-weight: 700;
+  line-height: calc(37 / 26);
+  letter-spacing: .027em;
+  @include mq(md) {
+    // font-size: calc(26 / 1400 * 100vw);
+    // line-height: calc(26 / 26);
+    // letter-spacing: 0;
+  }
+}
+
+.p-header__btnitem--phonenumber__img {
+  width: rem(16);
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__btnitem--phonenumber__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/21;
+}
+
+.p-header__btnitem--phonenumber__text03 {
+  color: $black;
+  font-size: rem(12);
+  line-height: calc(17 / 12);
+  letter-spacing: .004em;
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__btnitem--phonenumber__text04 {
+  display: none;
+  @include mq(md) {
+    // display: block;
+    // font-size: calc(12 / 1400 * 100vw);
+  }
+}
+
+
+/*-------------------------------------------
+Web予約ボタン
+-------------------------------------------*/
+.p-header__btnitem--reservation {
+  color: $white;
+  background: $blue;
+  @include mq(md) {
+    // background: $green;
+    // height: inherit;
+    // width: calc(120 / 382 * 100%);
+    // order: 2;
+  }
+}
+
+.p-header__btnitem--reservation:hover {
+  @include mq(md) {
+    // opacity: 0.6;
+    // cursor: pointer;
+  }
+}
+
+.p-header__btnitem--reservation a {
+  display: flex;
+  align-items: center;
+  font-size: rem(22);
+  font-weight: 500;
+  line-height: calc(32 / 22);
+  letter-spacing: .1em;
+  gap: rem(19.5);
+  padding: rem(19) rem(87) rem(19) rem(76);
+  @include mq(md) {
+    // font-size: calc(18 / 1400 * 100vw);
+    // font-weight: 700;
+    // line-height: calc(18 / 18);
+    // padding: rem(28) calc(16 / 1400 * 100vw) rem(28) calc(18 / 1400 * 100vw);
+    // align-items: center;
+    // height: inherit;
+  }
+}
+
+.p-header__btnitem--reservation__img {
+  width: rem(31);
+  @include mq(md) {
+    // display: none;
+  }
+}
+
+.p-header__btnitem--reservation__img img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 31/32;
+}
+
+
+/*-------------------------------------------
+ハンバーガーメニュー展開時、背景を固定
+-------------------------------------------*/
+body.active {
+  height: 100%;
+  overflow: hidden;
+}

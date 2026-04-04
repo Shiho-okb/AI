@@ -1,7 +1,7 @@
 
 jQuery(function ($) {
 
-  // ページトップボタン
+  /* ===== ページトップボタン ===== */
   var topBtn = $('.js-pagetop');
   topBtn.hide();
 
@@ -24,7 +24,8 @@ jQuery(function ($) {
     return false;
   });
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。)
+
+  /* ===== スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動。ヘッダーの高さ考慮。) ===== */
   $(document).on('click', 'a[href*="#"]', function () {
     let time = 400;
     let header = $('header').innerHeight();
@@ -34,5 +35,93 @@ jQuery(function ($) {
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
     return false;
   });
+
+
+  /* ===== ハンバーガーメニュー ===== */
+  $('.js-hamburger').on('click', function (e) {
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    $("body").toggleClass("active");
+    $('.js-drawer').fadeToggle();
+
+    checkFadeIn();
+  });
+
+  // ハンバーガーメニュー内リンク
+  let isSp = window.matchMedia('(max-width: 767px)').matches;
+
+  $('.p-header-nav-item__link[href], .p-header-dropmenu__link').on('click', function () {
+    // pc時は処理をしせず終了
+    if (!isSp) return;
+
+    $('.js-hamburger').toggleClass('is-active');
+    $('body').toggleClass('active');
+    $('.js-drawer').fadeToggle();
+
+    checkFadeIn();
+  });
+
+  // リサイズした際に、isSpを更新する
+  window.addEventListener('resize', function () {
+    isSp = window.matchMedia('(max-width: 767px)').matches;
+  });
+
+
+  /* ===== フェードイン ===== */
+    function checkFadeIn() {
+      const wHeight = $(window).height();
+      const wScroll = $(window).scrollTop();
+
+      // 通常フェードイン
+      const targets = [
+        ".js-mainvisual__textbox",
+        ".js-mainvisual__title",
+        ".js-image",
+        ".js-subtitle",
+        ".js-title"
+      ].join(", ");
+      $(targets).each(function () {
+        const bPosition = $(this).offset().top;
+
+        if (wScroll > bPosition - wHeight + 200) {
+          if ($(this).hasClass("js-mainvisual__title")) {
+            $(this).addClass("u-fadeIn--title");
+          } else {
+            $(this).addClass("u-fadeIn");
+          }
+        }
+      });
+
+      // 追従ボタン用
+      const fixedBtn = $(".js-fixed");
+      const footer = $(".js-footer");
+
+      if (!footer.length) return;
+      const footerTop = footer.offset().top;
+      const fixedBtnHeight = fixedBtn.outerHeight();
+      const windowBottom = wScroll + wHeight;
+
+      // 表示条件
+      if ($("body").hasClass("active")) {
+        fixedBtn.addClass("is-show");
+      } else {
+        if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
+          fixedBtn.addClass("is-show");
+        } else {
+          fixedBtn.removeClass("is-show");
+        }
+      }
+
+      // if (wScroll > 100 && windowBottom < footerTop + fixedBtnHeight) {
+      //   fixedBtn.addClass("is-show");
+      // } else {
+      //   fixedBtn.removeClass("is-show");
+      // }
+    }
+
+    // 初期表示
+    $(window).on("scroll", checkFadeIn);
+    checkFadeIn();
+
 
 });

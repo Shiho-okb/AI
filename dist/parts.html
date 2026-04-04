@@ -29,6 +29,90 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+  <!-- 追従ボタン -->
+  <ul class="c-fixed js-fixed">
+    <li class="c-fixed__item c-fixed__item--phonenumber">
+      <a href="tel:050-3184-4476">
+        <div class="c-fixed__phonenumber">
+          <div class="c-fixed__phonenumber-img">
+            <img src="./images/fixed/fixed_01.svg" alt="電話のロゴ" width="18" height="24">
+          </div>
+          <span class="c-fixed__text">電話予約</span>
+        </div>
+      </a>
+    </li>
+    <li class="c-fixed__item c-fixed__item--reservation">
+      <a href="#">
+        まずはLINEで<br>無料カウンセリング
+      </a>
+    </li>
+  </ul>
+
+  <!-- ヘッダー -->
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner">
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo js-header">
+          <a href="./" class="js-header">
+            SALON ASSIST
+          </a>
+        </h1>
+        <button class="p-header__hamburger js-hamburger" aria-label="ハンバーガーボタン">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav js-drawer">
+          <div class="p-header__nav-wrapper">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">サービス内容</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">料金プラン</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">施術の流れ</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">よくある質問</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">運営会社</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">プライバシーポリシー</a>
+              </li>
+            </ul>
+
+            <!-- <ul class="p-header__btnlist">
+              <li class="p-header__btnitem p-header__btnitem--phonenumber">
+                <a href="tel:03-0000-0000">
+                  <div class="p-header__btnitem--phonenumber__textbox">
+                    <div class="p-header__btnitem--phonenumber__img">
+                      <img src="./images/header/icon_02.png" alt="電話のロゴ" width="16" height="21">
+                    </div>
+                    <span class="p-header__btnitem--phonenumber__text01">TEL.</span><span class="p-header__btnitem--phonenumber__text02">03-0000-0000</span>
+                  </div>
+                  <span class="p-header__btnitem--phonenumber__text03">お気軽にお問い合わせください</span>
+                  <span class="p-header__btnitem--phonenumber__text04">営業時間　10:00〜19:00</span>
+                </a>
+              </li>
+              <li class="p-header__btnitem p-header__btnitem--reservation">
+                <a href="./contact/index.html">
+                  <div class="p-header__btnitem--reservation__img">
+                    <img src="./images/header/icon_01.png" alt="カレンダーのロゴ" width="31" height="32">
+                  </div>
+                  Web予約
+                </a>
+              </li>
+            </ul> -->
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <div class="l-inner">
     <p class="p-test">サイトが表示されました!</p>
 
@@ -495,6 +579,62 @@
       <a href="#">まずはLINEで<br>無料カウンセリング</a>
     </div>
 
+    <!-- フッター -->
+    <footer class="p-footer l-footer js-footer">
+      <div class="p-footer__inner l-inner">
+        <div class="p-footer__wrapper">
+          <div class="p-footer__logo">
+            <a href="./">
+              ASSIST DENTAL CLINIC
+            </a>
+          </div>
+          <nav class="p-footer__nav js-drawer">
+            <ul class="p-footer__nav-list">
+              <li class="p-footer__nav-item p-footer-nav-item">
+                <a href="./index.html#news" class="p-footer-nav-item__link">新着情報</a>
+              </li>
+              <li class="p-footer__nav-item p-footer-nav-item">
+                <a href="./index.html#treatment" class="p-footer-nav-item__link">診療内容</a>
+              </li>
+              <li class="p-footer__nav-item p-footer-nav-item">
+                <a href="./index.html#flow" class="p-footer-nav-item__link">治療の流れ</a>
+              </li>
+              <li class="p-footer__nav-item p-footer-nav-item">
+                <div class="p-footer-nav-item__accordion">
+                  <a href="./about/index.html" class="p-footer-nav-item__link">当院について</a>
+                </div>
+                <ul class="p-footer__dropmenu p-footer-dropmenu">
+                  <li class="p-footer-dropmenu__item">
+                    <a href="./about/index.html#clinic" class="p-footer-dropmenu__link">
+                      <span>院長挨拶</span>
+                    </a>
+                    <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                  </li>
+                  <li class="p-footer-dropmenu__item">
+                    <a href="./about/index.html#facility" class="p-footer-dropmenu__link">
+                      <span>設備紹介</span>
+                    </a>
+                    <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                  </li>
+                  <li class="p-footer-dropmenu__item">
+                    <a href="./about/index.html#company" class="p-footer-dropmenu__link">
+                      <span>会社概要</span>
+                    </a>
+                    <span class="p-footer-dropmenu__toggle js-accordion"></span>
+                  </li>
+                </ul>
+              </li>
+              <li class="p-footer__nav-item p-footer-nav-item">
+                <a href="https://www.google.co.jp/" class="p-footer-nav-item__link" target="_blank" rel="noopener noreferrer">
+                  プライバシーポリシー
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <small class="p-footer__copyright">©︎2024 ASSIST DENTAL CLINIC All Rights Reserved.</small>
+      </div>
+    </footer>
   </div>
 
   <!-- JavaScript -->
