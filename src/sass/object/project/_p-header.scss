@@ -5,7 +5,7 @@
   background: $pink;
   @include mq(md) {
     height: rem(90);
-    transition: .4s;
+    transition: transform .4s;
   }
   @include mq(xl) {
     height: calc(90 / 1440 * 100vw);
@@ -36,7 +36,6 @@
   font-family: "Shippori Mincho", serif;
   color: $white;
   font-size: rem(22);
-  letter-spacing: 0;
   font-weight: 600;
   height: inherit;
   position: relative;
@@ -126,7 +125,6 @@
     padding: 0;
     width: 100%;
     max-width: 100%;
-    height: inherit;
     min-height: initial;
     overflow: initial;
     flex-direction: row;
@@ -153,7 +151,6 @@
     position: relative;
     width: auto;
     height: inherit;
-    transition: .4s;
   }
 }
 
@@ -162,16 +159,13 @@
   padding: rem(3.5) rem(10);
   font-size: rem(16);
   line-height: calc(38 / 16);
-  letter-spacing: 0;
   @include mq(md) {
     display: flex;
     align-items: center;
     font-size: calc(13 / 1440 * 100vw);
     line-height: 1;
-    letter-spacing: 0;
     color: $white;
     height: inherit;
-    transition: .4s;
     white-space: nowrap;
   }
 }
@@ -313,7 +307,7 @@
     border: 1.5px solid $white;
     font-size: calc(14 / 1440 * 100vw);
     line-height: calc(17 / 14);
-    padding-block: rem(8) rem(8);
+    padding-block: rem(8);
     padding-right: rem(14);
     transition: transform .2s, box-shadow .2s;
   }
