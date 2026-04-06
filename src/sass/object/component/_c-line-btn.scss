@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .c-line-btn {
-  margin-top: 100px;
-  margin-bottom: 100px; //あとで消す
+  // margin-top: 100px;
+  // margin-bottom: 100px; //あとで消す
 }
 
 .c-line-btn a {
@@ -12,7 +12,7 @@
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  width: rem(270);
+  // width: rem(270);
   padding-block: rem(10) rem(7);
   background: $green;
   color: $white;
@@ -26,7 +26,7 @@
     0 5px 0 #439121;
   transition: 0.3s ease-in-out;
   @include mq(md) {
-    width: rem(500);
+    // width: rem(500);
     padding-block: rem(18) rem(8);
     font-size: rem(28);
     line-height: calc(35 / 28);
@@ -55,4 +55,5 @@
   box-shadow:
     inset 0 2px 0 rgba(255, 255, 255, 0.4),
     0 3px 0 #439121;
+    opacity: 1;
 }

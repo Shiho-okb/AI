@@ -38,6 +38,7 @@ button {
   @include mq(md) {
     transition: .3s;
     &:hover {
+      opacity: 0.8;
       cursor: pointer;
     }
   }
