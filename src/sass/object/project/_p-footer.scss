@@ -1,0 +1,108 @@
+@use "global" as *;
+
+.p-footer {
+  background-color: $darkpink02;
+  padding-block: rem(65) rem(40);
+  @include mq(md) {
+    // padding-block: rem(88) rem(19);
+    // transition: .4s;
+  }
+}
+
+.p-footer__inner {
+  max-width: rem(600);
+  @include mq(md) {
+    // max-width: $innerWidth + $padding-pc * 2;
+  }
+}
+
+.p-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    // flex-direction: row;
+    // gap: calc(125 / 1400 * 100vw);
+    // align-items: flex-start;
+  }
+}
+
+.p-footer__logo {
+  position: relative;
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(20);
+  font-weight: 600;
+  color: $white;
+  @include mq(md) {
+    // font-size: rem(34);
+    // white-space: nowrap;
+  }
+}
+
+.p-footer__logo::before {
+  content: "";
+  position: absolute;
+  top: rem(-14);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+}
+
+
+/*-------------------------------------------
+ナビゲーション
+-------------------------------------------*/
+.p-footer__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-inline: rem(15);
+  margin-top: rem(25);
+  @include mq(md) {
+    // width: auto;
+    // margin-top: rem(-3);
+  }
+}
+
+.p-footer__nav-list {
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    // flex-direction: row;
+    // gap: calc(35 / 1440 * 100vw);
+    // flex-wrap: nowrap;
+    // margin-left: rem(-5);
+  }
+}
+
+.p-footer-nav-item__link {
+  display: block;
+  font-size: rem(14);
+  line-height: 2.3;
+  color: $white;
+  width: 100%;
+  @include mq(md) {
+    // width: auto;
+    // flex: 1;
+    // white-space: nowrap;
+    // padding-block: rem(12) rem(8);
+    // transition: .4s;
+  }
+}
+
+
+/*-------------------------------------------
+コピーライト
+-------------------------------------------*/
+.p-footer__copyright {
+  margin-top: rem(49);
+  font-size: rem(13);
+  display: block;
+  text-align: center;
+  color: $white;
+  @include mq(md) {
+    // margin-top: rem(60);
+    // font-size: rem(12);
+    // margin-left: rem(32);
+  }
+}
