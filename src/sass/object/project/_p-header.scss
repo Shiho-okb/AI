@@ -329,7 +329,7 @@
 
 .p-header__counseling-btn a::after {
   @include mq(md) {
-    right: rem(20);
+    right: clamp(6px, calc(2.08vw - 10px), 20px);
     width: rem(14);
     height: rem(19);
   }
