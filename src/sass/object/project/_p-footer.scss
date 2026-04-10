@@ -2,43 +2,32 @@
 
 .p-footer {
   background-color: $darkpink02;
-  padding-block: rem(65) rem(40);
+  padding-block: rem(173) rem(60);
   @include mq(md) {
-    // padding-block: rem(88) rem(19);
-    // transition: .4s;
+    padding-block: rem(352) rem(40);
+    transition: .4s;
   }
 }
 
 .p-footer__inner {
   max-width: rem(600);
   @include mq(md) {
-    // max-width: $innerWidth + $padding-pc * 2;
+    max-width: $innerWidth + $padding-pc * 2;
   }
 }
 
 .p-footer__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   @include mq(md) {
-    // flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
     // gap: calc(125 / 1400 * 100vw);
-    // align-items: flex-start;
   }
 }
 
-.p-footer__logo {
-  position: relative;
-  font-family: "Shippori Mincho", serif;
-  font-size: rem(20);
-  font-weight: 600;
-  color: $white;
-  @include mq(md) {
-    // font-size: rem(34);
-    // white-space: nowrap;
-  }
-}
-
-.p-footer__logo::before {
+.p-footer__wrapper::before {
   content: "";
   position: absolute;
   top: rem(-14);
@@ -48,6 +37,17 @@
   background-color: $white;
 }
 
+.p-footer__logo {
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(20);
+  font-weight: 600;
+  color: $white;
+  @include mq(md) {
+    font-size: rem(40);
+    white-space: nowrap;
+    padding-top: rem(8);
+  }
+}
 
 /*-------------------------------------------
 ナビゲーション
@@ -59,19 +59,22 @@
   padding-inline: rem(15);
   margin-top: rem(25);
   @include mq(md) {
-    // width: auto;
-    // margin-top: rem(-3);
+    gap: rem(79);
+    padding-inline: 0;
+    margin-top: rem(62);
+    width: auto;
   }
 }
 
 .p-footer__nav-list {
   display: flex;
   flex-direction: column;
+}
+
+.p-footer__nav-list:nth-of-type(2) {
   @include mq(md) {
-    // flex-direction: row;
-    // gap: calc(35 / 1440 * 100vw);
-    // flex-wrap: nowrap;
-    // margin-left: rem(-5);
+    justify-content: flex-end;
+    margin-top: rem(102);
   }
 }
 
@@ -82,14 +85,12 @@
   color: $white;
   width: 100%;
   @include mq(md) {
-    // width: auto;
-    // flex: 1;
-    // white-space: nowrap;
-    // padding-block: rem(12) rem(8);
-    // transition: .4s;
+    font-size: rem(16);
+    line-height: 2;
+    width: auto;
+    transition: .4s;
   }
 }
-
 
 /*-------------------------------------------
 コピーライト
@@ -101,8 +102,7 @@
   text-align: center;
   color: $white;
   @include mq(md) {
-    // margin-top: rem(60);
-    // font-size: rem(12);
-    // margin-left: rem(32);
+    margin-top: rem(47);
+    font-size: rem(15);
   }
 }
