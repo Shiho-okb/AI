@@ -29,12 +29,206 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <div class="l-inner">
-    <p class="p-test">サイトが表示されました!</p>
-    <div class="p-test__img">
-      <img src="./images/dummy1.webp" alt="サンプル画像" width="3600" height="2400" loading="lazy" decoding="async">
+  <!-- 追従ボタン -->
+  <ul class="c-fixed js-fixed">
+    <li class="c-fixed__item c-fixed__item--phonenumber">
+      <a href="tel:050-3184-4476">
+        <div class="c-fixed__phonenumber">
+          <div class="c-fixed__phonenumber-img">
+            <img src="./images/fixed/fixed_01.svg" alt="電話のロゴ" width="18" height="24">
+          </div>
+          <span class="c-fixed__text">電話予約</span>
+        </div>
+      </a>
+    </li>
+    <li class="c-fixed__item c-fixed__item--counseling">
+      <a href="#">
+        まずはLINEで<br>無料カウンセリング
+      </a>
+    </li>
+  </ul>
+
+  <!-- ヘッダー -->
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner">
+      <div class="p-header__wrapper">
+        <h1 class="p-header__logo">
+          <a href="./">
+            SALON ASSIST
+          </a>
+        </h1>
+        <button class="p-header__hamburger js-hamburger" aria-label="ハンバーガーボタン">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="p-header__nav js-drawer">
+          <div class="p-header__nav-wrapper">
+            <ul class="p-header__nav-list">
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">
+                  <span class="p-header-nav-item__text">サービス内容</span>
+                </a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">
+                  <span class="p-header-nav-item__text">料金プラン</span>
+                </a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">
+                  <span class="p-header-nav-item__text">施術の流れ</span>
+                </a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item">
+                <a href="#" class="p-header-nav-item__link">
+                  <span class="p-header-nav-item__text">よくある質問</span>
+                </a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item u-sp">
+                <a href="#" class="p-header-nav-item__link">運営会社</a>
+              </li>
+              <li class="p-header__nav-item p-header-nav-item u-sp">
+                <a href="#" class="p-header-nav-item__link">プライバシーポリシー</a>
+              </li>
+            </ul>
+            <ul class="p-header__btnlist">
+              <li class="p-header__btnbox p-header__phonenumber">
+                <a href="tel:050-3184-4476" class="p-header__phonenumber-btn">
+                  <div class="p-header__phonenumber-textbox">
+                    <div class="p-header__phonenumber-img">
+                      <img src="./images/fixed/fixed_01.svg" alt="電話のロゴ" width="16" height="21">
+                    </div>
+                    <span class="p-header__phonenumber-num">050-3184-4476</span>
+                  </div>
+                  <span class="p-header__phonenumber-hours">受付時間11:00〜19:00(水曜日定休)</span>
+                </a>
+              </li>
+              <li class="p-header__btnbox p-header__counseling">
+                <div class="p-header__counseling-btn c-line-btn">
+                  <a href="#">まずはLINEで<br>無料カウンセリング</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <!-- メインエリア -->
+  <main class="l-main">
+
+    <!-- メインビジュアル -->
+    <div class="p-mainvisual l-mainvisual">
+      <p class="p-mainvisual__logo">SALON ASSIST</p>
+      <div class="p-mainvisual__inner l-inner">
+        <div class="p-mainvisual__wrapper">
+          <!-- コンテンツ -->
+          <div class="p-mainvisual__content">
+            <p class="p-mainvisual__label">梅田茶屋町院</p>
+            <p class="p-mainvisual__campaign">
+              新規医院オープン<br>
+              記念キャンペーン
+            </p>
+            <h2 class="p-mainvisual__title">
+              全身医療<br>脱毛
+            </h2>
+            <p class="p-mainvisual__course">
+              全５回
+              <span class="p-mainvisual__course-sub">ライトコース</span>
+            </p>
+            <!-- 金額 -->
+            <p class="p-mainvisual__fee c-fee-card__monthly">
+              <span class="c-fee-card__month">月々</span>
+              <span class="c-fee-card__amount">5,800</span>
+              <span class="c-fee-card__unit">
+                <span class="c-fee-card__tax">( 税別 )</span>
+                <span class="c-fee-card__yen">円</span>
+              </span>
+            </p>
+          </div>
+          <!-- 六角形 -->
+          <ul class="p-mainvisual__cards">
+            <!-- 皮膚科医監修 -->
+            <li class="p-mainvisual__card c-hexagon-card">
+              <div class="c-hexagon-card__inner">
+                <p class="c-hexagon-card__text">
+                  <span class="c-hexagon-card__bold">皮膚科医</span>が<br>
+                  <span class="c-hexagon-card__bold">監修</span>する<br>
+                  <span class="c-hexagon-card__bottom">医療脱毛</span>
+                </p>
+              </div>
+            </li>
+            <!-- 最短90分 -->
+            <li class="p-mainvisual__card c-hexagon-card c-hexagon-card--time">
+              <div class="c-hexagon-card__inner">
+                <p class="c-hexagon-card__text">
+                  全身脱毛<br>
+                  <span class="c-hexagon-card__bold">
+                    <span class="c-hexagon-card__label">最短</span>
+                    <span class="c-hexagon-card__num">90</span>
+                    <span class="c-hexagon-card__unit">分</span>
+                  </span>
+                  <span class="c-hexagon-card__bottom">で完了</span>
+                </p>
+              </div>
+            </li>
+            <!-- 痛みが少ない -->
+            <li class="p-mainvisual__card c-hexagon-card c-hexagon-card--pain">
+              <div class="c-hexagon-card__inner">
+                <p class="c-hexagon-card__text">
+                  <span class="c-hexagon-card__top">医療脱毛なのに</span><br>
+                  <span class="c-hexagon-card__bold">痛みが</span><br>
+                  <span class="c-hexagon-card__bold">少ない</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="p-mainvisual__note">
+            <p>※月々5,800円( 税別 )は30回払いの医療ローンでお支払いいただいた場合の、ローン手数料込みのお値段になります。</p>
+            <p>※医療脱毛は全て自費診療となります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="p-footer js-footer">
+    <div class="p-footer__inner l-inner">
+      <div class="p-footer__wrapper">
+        <div class="p-footer__logo">
+          <a href="./">SALON ASSIST</a>
+        </div>
+        <nav class="p-footer__nav js-drawer">
+          <ul class="p-footer__nav-list">
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">サービス内容</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">料金プラン</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">施術の流れ</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">よくある質問</a>
+            </li>
+          </ul>
+          <ul class="p-footer__nav-list">
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">運営会社</a>
+            </li>
+            <li class="p-footer__nav-item p-footer-nav-item">
+              <a href="#" class="p-footer-nav-item__link">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <small class="p-footer__copyright">&copy;2024 Salon Assist</small>
+    </div>
+  </footer>
 
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>

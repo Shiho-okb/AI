@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-mainvisual {
+  margin-top: rem(60);
+  @include mq(md) {
+    // margin-top: calc(70 / 1440 * 100vw);
+  }
+}
