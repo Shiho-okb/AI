@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-worries {
-  padding: rem(58) 0;
+  padding: rem(58) 0 rem(19);
   @include mq(md) {
     padding: rem(75) 0;
   }
@@ -144,6 +144,10 @@
   justify-content: center;
   margin-top: rem(30);
   padding-bottom: rem(98);
+  @include mq(md) {
+    margin-top: rem(28);
+    padding-bottom: rem(112);
+  }
 }
 
 .p-worries__recommend::after {
@@ -157,18 +161,27 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    z-index: -100;
+    @include mq(md) {
+      width: rem(401);
+      height: rem(78);
+      background: url(../images/worries/worries_04PC.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
 }
 
-/* テキスト */
 .p-worries__recommend-text {
   position: relative;
-  z-index: 1;
   text-align: center;
   color: $pink;
   font-size: rem(20);
   font-weight: 900;
   line-height: calc(28 / 20);
+  @include mq(md) {
+    font-size: rem(27);
+    line-height: calc(35 / 27);
+  }
 }
 
 .p-worries__recommend-text::before,
@@ -180,16 +193,30 @@
   width: rem(1.5);
   height: rem(58);
   background-color: $pink;
+  border-radius: 999px;
+  @include mq(md) {
+    top: 56%;
+    width: rem(2.8);
+    height: rem(70);
+  }
 }
 
 .p-worries__recommend-text::before {
   left: rem(-22);
   transform: translateY(-50%) rotate(-28deg);
   box-shadow: 4px 2px 0 $pink;
+  @include mq(md) {
+    left: rem(-41);
+    box-shadow: 8px 4px 0 $pink;
+  }
 }
 
 .p-worries__recommend-text::after{
   right: rem(-20);
   transform: translateY(-50%) rotate(28deg);
   box-shadow: 4px -2px 0 $pink;
+  @include mq(md) {
+    right: rem(-32);
+    box-shadow: 8px -4px 0 $pink;
+  }
 }

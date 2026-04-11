@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.p-effect {
+  padding-bottom: rem(52);
+}
+
+.p-effect__title {
+  text-align: center;
+  font-size: rem(16);
+  font-weight: 900;
+}
+
+.p-effect__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: rem(13);
+  margin-top: rem(12);
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: rem(27);
+  }
+}
+
+.p-effect__accent {
+  position: relative;
+  font-size: rem(36);
+  color: #b29933;
+}
+
+.p-effect__accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(2);
+  width: 100%;
+  height: rem(1.2);
+  background: #b29933;
+}
+
+.p-effect__feel {
+  font-size: rem(30);
+  color: #c6618c;
+}
+
+.p-effect__text {
+  font-family: $font-sub;
+  text-align: right;
+  font-size: rem(13);
+  font-weight: 500;
+  margin-top: rem(8);
+}
