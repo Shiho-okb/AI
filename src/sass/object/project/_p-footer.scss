@@ -9,13 +9,6 @@
   }
 }
 
-.p-footer__inner {
-  max-width: rem(600);
-  @include mq(md) {
-    max-width: $innerWidth + $padding-pc * 2;
-  }
-}
-
 .p-footer__wrapper {
   position: relative;
   display: flex;
