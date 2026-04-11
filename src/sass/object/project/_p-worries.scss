@@ -2,15 +2,20 @@
 
 .p-worries {
   padding: rem(58) 0;
+  @include mq(md) {
+    padding: rem(75) 0;
+  }
 }
 
 .p-worries__wrapper {
   position: relative;
   margin: 0 auto;
   max-width: rem(345);
+  @include mq(md) {
+    max-width: rem(600);
+  }
 }
 
-/* SVGを背景化 */
 .p-worries__frame {
   position: absolute;
   inset: 0;
@@ -19,24 +24,34 @@
   z-index: 0;
 }
 
-/* 中身 */
 .p-worries__content {
   position: relative;
   z-index: 1;
   padding: rem(26) rem(15) rem(33);
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: rem(17) 0 rem(27);
+  }
 }
 
-/* タイトル */
 .p-worries__title {
   text-align: center;
   font-size: rem(18);
   font-weight: 500;
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }
 
 .p-worries__title span {
   position: relative;
   font-size: rem(24);
   padding-inline: rem(8);
+  @include mq(md) {
+    font-size: rem(28);
+  }
 }
 
 .p-worries__title span::before,
@@ -47,6 +62,10 @@
   transform: translateY(-50%);
   width: rem(12);
   height: rem(29);
+  @include mq(md) {
+    width: rem(15);
+    height: rem(36);
+  }
 }
 
 .p-worries__title span::before {
@@ -59,21 +78,25 @@
   background: url(../images/worries/worries_02.png) no-repeat center / contain;
 }
 
-/* リスト */
 .p-worries__list {
   display: flex;
   flex-direction: column;
   gap: rem(16.5);
-  margin-top: rem(15);
+  margin-top: rem(14);
+  @include mq(md) {
+    gap: rem(9.5);
+  }
 }
 
-/* 各項目 */
 .p-worries__item {
   position: relative;
   padding-left: rem(26);
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.4;
+  @include mq(md) {
+    padding-left: rem(30);
+  }
 }
 
 .p-worries__item span {
@@ -89,6 +112,11 @@
   width: rem(16);
   height: rem(16);
   border: 0.4px solid $black;
+  @include mq(md) {
+    top: rem(2);
+    width: rem(18);
+    height: rem(18);
+  }
 }
 
 /* チェック */
@@ -100,4 +128,9 @@
   width: rem(17);
   height: rem(17);
   background: url(../images/worries/worries_03.png) no-repeat center / contain;
+  @include mq(md) {
+    top: rem(2);
+    width: rem(21);
+    height: rem(21);
+  }
 }
