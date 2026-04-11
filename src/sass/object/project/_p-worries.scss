@@ -103,7 +103,6 @@
   background: linear-gradient(transparent 60%, $lightpink 60%);
 }
 
-/* チェックボックス */
 .p-worries__item::before {
   content: "";
   position: absolute;
@@ -116,10 +115,10 @@
     top: rem(2);
     width: rem(18);
     height: rem(18);
+    border: 0.45px solid $black;
   }
 }
 
-/* チェック */
 .p-worries__item::after {
   content: "";
   position: absolute;
@@ -133,4 +132,64 @@
     width: rem(21);
     height: rem(21);
   }
+}
+
+
+/*-------------------------------------------
+おすすめバナー
+-------------------------------------------*/
+.p-worries__recommend {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: rem(30);
+  padding-bottom: rem(98);
+}
+
+.p-worries__recommend::after {
+  content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: rem(75);
+    background: url(../images/worries/worries_04.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: -100;
+}
+
+/* テキスト */
+.p-worries__recommend-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: $pink;
+  font-size: rem(20);
+  font-weight: 900;
+  line-height: calc(28 / 20);
+}
+
+.p-worries__recommend-text::before,
+.p-worries__recommend-text::after {
+  content: "";
+  position: absolute;
+  transform-origin: center;
+  top: 53%;
+  width: rem(1.5);
+  height: rem(58);
+  background-color: $pink;
+}
+
+.p-worries__recommend-text::before {
+  left: rem(-22);
+  transform: translateY(-50%) rotate(-28deg);
+  box-shadow: 4px 2px 0 $pink;
+}
+
+.p-worries__recommend-text::after{
+  right: rem(-20);
+  transform: translateY(-50%) rotate(28deg);
+  box-shadow: 4px -2px 0 $pink;
 }
