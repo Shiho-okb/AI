@@ -1,9 +1,30 @@
 @use "global" as *;
 
 .p-worries {
-  padding: rem(58) 0 rem(19);
+  position: relative;
+  padding-top: rem(56);
   @include mq(md) {
-    padding: rem(75) 0;
+    padding-top: rem(75);
+  }
+}
+
+.p-worries::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/worries/worries_05.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -100;
+  @include mq(md) {
+    background: url(../images/worries/worries_05PC.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 }
 

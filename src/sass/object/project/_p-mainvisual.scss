@@ -3,7 +3,7 @@
 .p-mainvisual {
   position: relative;
   overflow: hidden;
-  padding-bottom: rem(85);
+  padding-bottom: rem(87);
   @include mq(md) {
     padding-bottom: 0;
   }
@@ -14,8 +14,8 @@
   display: block;
   position: absolute;
   top: rem(-60);
+  bottom: 0;
   width: 100%;
-  height: 109%;
   background: url(../images/mv/mv_03.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -23,7 +23,6 @@
   z-index: -100;
   @include mq(md) {
     top: 0;
-    height: 100%;
     background: url(../images/mv/mv_03PC.png);
     background-repeat: no-repeat;
     background-position: center center;

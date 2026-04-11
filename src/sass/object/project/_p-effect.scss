@@ -1,13 +1,55 @@
 @use "global" as *;
 
 .p-effect {
-  padding-bottom: rem(52);
+  padding-block: rem(22) rem(52);
+}
+
+.p-effect__inner {
+  @include mq(md) {
+    margin-inline: rem(270);
+  }
 }
 
 .p-effect__title {
   text-align: center;
   font-size: rem(16);
   font-weight: 900;
+  @include mq(md) {
+    text-align: left;
+    font-size: rem(28);
+    margin-left: rem(10);
+  }
+}
+
+.p-effect__accent {
+  position: relative;
+  font-size: rem(36);
+  color: #b29933;
+  @include mq(md) {
+    font-size: rem(60);
+    line-height: 1;
+  }
+}
+
+.p-effect__accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(2);
+  width: 100%;
+  height: rem(1.2);
+  background: #b29933;
+  @include mq(md) {
+    height: rem(3);
+  }
+}
+
+.p-effect__feel {
+  font-size: rem(30);
+  color: #c6618c;
+  @include mq(md) {
+    font-size: rem(53);
+  }
 }
 
 .p-effect__wrapper {
@@ -19,34 +61,20 @@
     flex-direction: row;
     align-items: flex-end;
     gap: rem(27);
+    margin-top: rem(24);
   }
-}
-
-.p-effect__accent {
-  position: relative;
-  font-size: rem(36);
-  color: #b29933;
-}
-
-.p-effect__accent::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: rem(2);
-  width: 100%;
-  height: rem(1.2);
-  background: #b29933;
-}
-
-.p-effect__feel {
-  font-size: rem(30);
-  color: #c6618c;
 }
 
 .p-effect__text {
   font-family: $font-sub;
+  color: $black02;
   text-align: right;
   font-size: rem(13);
   font-weight: 500;
   margin-top: rem(8);
+  margin-right: rem(15);
+  @include mq(md) {
+    text-align: left;
+    margin-top: rem(21);
+  }
 }
