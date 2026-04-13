@@ -1,0 +1,143 @@
+@use "global" as *;
+
+.p-reason {
+  position: relative;
+  background-color: $lightpink;
+  padding-top: rem(57);
+}
+
+.p-reason::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(12);
+  right: rem(3);
+  width: rem(110);
+  height: rem(116);
+  aspect-ratio: 110 / 116;
+  background: url(../images/reason/reason_07.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 100;
+}
+
+.p-reason__head {
+  position: relative;
+  text-align: center;
+  margin-bottom: rem(-4);
+}
+
+.p-reason__head::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(218);
+  height: rem(134);
+  border: 2px solid $pink;
+  background-color: $white;
+  border-bottom: none;
+  border-radius: 50% 50% 0 0;
+}
+
+.p-reason__lead {
+  position: relative;
+  font-size: rem(11.5);
+  font-weight: 900;
+  color: $pink;
+  padding-top: rem(9);
+}
+
+.p-reason__lead::before,
+.p-reason__lead::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-17);
+  width: rem(13);
+  height: rem(13);
+  @include mq(md) {
+  }
+}
+
+.p-reason__lead::before {
+  left: 25%;
+  background: url(../images/reason/reason_01.svg) no-repeat center / contain;
+}
+
+.p-reason__lead::after {
+  right: 25%;
+  background: url(../images/reason/reason_02.svg) no-repeat center / contain;
+}
+
+.p-reason__title {
+  position: relative;
+  display: inline-block;
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(15.4);
+  font-weight: 700;
+  color: $yellow;
+  transform: skewX(-5deg);
+  z-index: 100;
+}
+
+.p-reason__title span {
+  font-size: rem(33);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.p-reason__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: rem(1);
+  background: $yellow;
+}
+
+.p-reason-cards {
+  position: relative;
+  padding-left: rem(18);
+  padding-right: rem(18);
+  counter-reset: reason;
+  background-color: $white;
+  border: 2px solid $pink;
+  border-top: none;
+  padding-block: rem(43) rem(46);
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(61) rem(31);
+    border: 4px solid $pink;
+    border-top: none;
+    padding-left: rem(33);
+    padding-right: rem(33);
+    padding-top: rem(62);
+  }
+}
+
+/* 左の線 */
+.p-reason-cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(50% - rem(106)); // 👈 アーチ半分に合わせる
+  height: rem(2);
+  background: $pink;
+}
+
+/* 右の線 */
+.p-reason-cards::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(50% - rem(106));
+  height: rem(2);
+  background: $pink;
+}
