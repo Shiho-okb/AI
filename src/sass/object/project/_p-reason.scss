@@ -4,6 +4,9 @@
   position: relative;
   background-color: $lightpink;
   padding-top: rem(57);
+  @include mq(md) {
+    padding-top: rem(132);
+  }
 }
 
 .p-reason::before {
@@ -20,14 +23,25 @@
   background-position: center center;
   background-size: cover;
   z-index: 100;
+  @include mq(md) {
+    top: rem(74);
+    right: 27.3%;
+    width: rem(183);
+    height: rem(192);
+    aspect-ratio: 183 / 192;
+  }
 }
 
 .p-reason__head {
   position: relative;
   text-align: center;
   margin-bottom: rem(-4);
+  @include mq(md) {
+    margin-bottom: rem(-5);
+  }
 }
 
+/* アーチの装飾 */
 .p-reason__head::before {
   content: "";
   position: absolute;
@@ -40,6 +54,11 @@
   background-color: $white;
   border-bottom: none;
   border-radius: 50% 50% 0 0;
+  @include mq(md) {
+    width: rem(526);
+    height: rem(375);
+    border: 4px solid $pink;
+  }
 }
 
 .p-reason__lead {
@@ -48,6 +67,10 @@
   font-weight: 900;
   color: $pink;
   padding-top: rem(9);
+  @include mq(md) {
+    font-size: rem(20);
+    padding-top: rem(20);
+  }
 }
 
 .p-reason__lead::before,
@@ -58,17 +81,26 @@
   width: rem(13);
   height: rem(13);
   @include mq(md) {
+    bottom: rem(-34);
+    width: rem(31);
+    height: rem(31);
   }
 }
 
 .p-reason__lead::before {
   left: 25%;
   background: url(../images/reason/reason_01.svg) no-repeat center / contain;
+  @include mq(md) {
+    left: 34.5%;
+  }
 }
 
 .p-reason__lead::after {
   right: 25%;
   background: url(../images/reason/reason_02.svg) no-repeat center / contain;
+  @include mq(md) {
+    right: 34.5%;
+  }
 }
 
 .p-reason__title {
@@ -80,12 +112,19 @@
   color: $yellow;
   transform: skewX(-5deg);
   z-index: 100;
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: rem(10);
+  }
 }
 
 .p-reason__title span {
   font-size: rem(33);
   font-weight: 400;
   line-height: 1;
+  @include mq(md) {
+    font-size: rem(68);
+  }
 }
 
 .p-reason__title::after {
@@ -97,6 +136,9 @@
   width: 100%;
   height: rem(1);
   background: $yellow;
+  @include mq(md) {
+    width: 110%;
+  }
 }
 
 .p-reason-cards {
@@ -114,9 +156,8 @@
     gap: rem(61) rem(31);
     border: 4px solid $pink;
     border-top: none;
-    padding-left: rem(33);
-    padding-right: rem(33);
-    padding-top: rem(62);
+    padding-inline: rem(33);
+    padding-block: rem(67) rem(53);
   }
 }
 
@@ -126,9 +167,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(50% - rem(106)); // 👈 アーチ半分に合わせる
+  width: calc(50% - rem(106));
   height: rem(2);
   background: $pink;
+  @include mq(md) {
+    width: calc(50% - rem(247));
+    height: rem(4);
+  }
 }
 
 /* 右の線 */
@@ -140,4 +185,8 @@
   width: calc(50% - rem(106));
   height: rem(2);
   background: $pink;
+  @include mq(md) {
+    width: calc(50% - rem(247));
+    height: rem(4);
+  }
 }

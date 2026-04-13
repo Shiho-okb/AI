@@ -117,6 +117,28 @@ jQuery(function ($) {
   $(window).on("scroll", checkFadeIn);
   checkFadeIn();
 
+
   /* ===== アーチテキスト ===== */
-  $('#js-arch').arctext({ radius: 200 })
+  let arcInstance;
+
+  function setArcText() {
+    const width = window.innerWidth;
+
+    let radius = width >= 768 ? 300 : 200;
+
+    if (arcInstance) {
+      arcInstance.destroy();
+    }
+
+    arcInstance = $('#js-arch').arctext({
+      radius: radius
+    });
+  }
+
+  setArcText();
+
+  $(window).on('resize', function () {
+    setArcText();
+  });
+
 });
