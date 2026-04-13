@@ -9,29 +9,6 @@
   }
 }
 
-.p-reason::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: rem(12);
-  right: rem(3);
-  width: rem(110);
-  height: rem(116);
-  aspect-ratio: 110 / 116;
-  background: url(../images/reason/reason_07.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  z-index: 100;
-  @include mq(md) {
-    top: rem(74);
-    right: 27.3%;
-    width: rem(183);
-    height: rem(192);
-    aspect-ratio: 183 / 192;
-  }
-}
-
 .p-reason__head {
   position: relative;
   text-align: center;
@@ -58,6 +35,29 @@
     width: rem(526);
     height: rem(375);
     border: 4px solid $pink;
+  }
+}
+
+.p-reason__head::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(-45);
+  right: rem(-12);
+  width: rem(110);
+  height: rem(116);
+  aspect-ratio: 110 / 116;
+  background: url(../images/reason/reason_07.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 100;
+  @include mq(md) {
+    top: rem(-58);
+    right: rem(172);
+    width: rem(183);
+    height: rem(192);
+    aspect-ratio: 183 / 192;
   }
 }
 
