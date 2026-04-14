@@ -3,7 +3,7 @@
 .p-reason {
   position: relative;
   background-color: $lightpink;
-  padding-top: rem(57);
+  padding-block: rem(57) rem(61);
   @include mq(md) {
     padding-top: rem(132);
   }
@@ -141,7 +141,7 @@
   }
 }
 
-.p-reason-cards {
+.p-reason__cards {
   position: relative;
   padding-left: rem(18);
   padding-right: rem(18);
@@ -162,7 +162,7 @@
 }
 
 /* 左の線 */
-.p-reason-cards::before {
+.p-reason__cards::before {
   content: "";
   position: absolute;
   top: 0;
@@ -177,7 +177,7 @@
 }
 
 /* 右の線 */
-.p-reason-cards::after {
+.p-reason__cards::after {
   content: "";
   position: absolute;
   top: 0;

@@ -120,23 +120,25 @@ jQuery(function ($) {
 
   /* ===== アーチテキスト ===== */
   let arcInstance;
-
   function setArcText() {
     const width = window.innerWidth;
 
+    // widthが768以上（PC）なら300、それ未満（SP）なら200
     let radius = width >= 768 ? 300 : 200;
 
+    // すでにarctextが適用されている場合
     if (arcInstance) {
+      // 前の状態を削除
       arcInstance.destroy();
     }
-
+    // arctextを適用
     arcInstance = $('#js-arch').arctext({
       radius: radius
     });
   }
-
   setArcText();
 
+  // ウィンドウサイズが変更されたときの処理
   $(window).on('resize', function () {
     setArcText();
   });

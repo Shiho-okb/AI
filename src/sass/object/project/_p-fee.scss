@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.p-fee {
+  padding-block: rem(63) rem(65);
+}
+
+.p-fee__title {
+  position: relative;
+  font-size: rem(20);
+  font-weight: 900;
+  color: $pink;
+  text-align: center;
+}
+
+.p-fee__title::before,
+.p-fee__title::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  width: rem(264);
+  height: rem(1.5);
+  background: $pink;
+}
+
+.p-fee__title::before {
+  top: rem(-3);
+  @include mq(md) {
+  }
+}
+
+.p-fee__title::after {
+  bottom: rem(-6);
+  @include mq(md) {
+  }
+}
+
+.p-fee__cards {
+  margin-top: rem(26);
+  @include mq(md) {
+    padding-left: rem(50);
+    padding-right: rem(50);
+  }
+}
+
+.p-fee__note {
+  font-family: $font-sub;
+  font-size: rem(13);
+  font-weight: 500;
+  line-height: calc(21 / 13);
+  margin-top: rem(15);
+}
+
+.p-fee__btn {
+  width: rem(270);
+  margin: rem(37) auto 0;
+  @include mq(md) {
+    width: rem(500);
+  }
+}
