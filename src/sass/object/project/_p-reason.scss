@@ -5,7 +5,7 @@
   background-color: $lightpink;
   padding-block: rem(57) rem(61);
   @include mq(md) {
-    padding-top: rem(132);
+    padding-block: rem(132) rem(134);
   }
 }
 

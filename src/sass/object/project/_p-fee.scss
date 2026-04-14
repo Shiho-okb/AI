@@ -2,6 +2,9 @@
 
 .p-fee {
   padding-block: rem(63) rem(65);
+  @include mq(md) {
+    padding-block: rem(111) rem(133);
+  }
 }
 
 .p-fee__title {
@@ -10,6 +13,9 @@
   font-weight: 900;
   color: $pink;
   text-align: center;
+  @include mq(md) {
+    font-size: rem(38);
+  }
 }
 
 .p-fee__title::before,
@@ -21,17 +27,23 @@
   width: rem(264);
   height: rem(1.5);
   background: $pink;
+  @include mq(md) {
+    width: rem(528);
+    height: rem(3.1);
+  }
 }
 
 .p-fee__title::before {
   top: rem(-3);
   @include mq(md) {
+    top: rem(-10);
   }
 }
 
 .p-fee__title::after {
   bottom: rem(-6);
   @include mq(md) {
+    bottom: rem(-12);
   }
 }
 
@@ -40,6 +52,7 @@
   @include mq(md) {
     padding-left: rem(50);
     padding-right: rem(50);
+    margin-top: rem(64);
   }
 }
 
@@ -49,6 +62,11 @@
   font-weight: 500;
   line-height: calc(21 / 13);
   margin-top: rem(15);
+  @include mq(md) {
+    width: fit-content;
+    margin-left: auto;
+    margin-top: rem(17);
+  }
 }
 
 .p-fee__btn {
@@ -56,5 +74,6 @@
   margin: rem(37) auto 0;
   @include mq(md) {
     width: rem(500);
+    margin: rem(51) auto 0;
   }
 }
