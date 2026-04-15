@@ -1,10 +1,9 @@
 @use "global" as *;
 
 .c-difference-card {
-  margin-top: rem(25); //あとで消す
   padding-inline: rem(15);
   padding-block: rem(8) rem(26);
-  background-color: $yellow03;
+  background-color: $white;
   @include mq(md) {
     padding-inline: rem(33);
     padding-block: rem(11) rem(10);

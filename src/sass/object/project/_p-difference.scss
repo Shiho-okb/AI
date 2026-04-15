@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.p-difference {
+  padding-block: rem(59) rem(60);
+  background-color: #edf9fa;
+  background-image: repeating-linear-gradient(90deg, #d8f5f5, #d8f5f5 4px, transparent 4px, transparent 8px);
+}
+
+.p-difference__ribbon {
+  background: $yellow;
+  padding: rem(7) rem(10);
+  text-align: center;
+  border-radius: rem(7);
+  corner-shape: scoop;
+}
+
+.p-difference__title {
+  border-top: 2px dotted $white;
+  border-bottom: 2px dotted $white;
+  padding: rem(5) 0;
+  font-size: rem(20);
+  font-weight: 900;
+  color: $white;
+}
+
+.p-difference__cards {
+  margin-top: rem(30);
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
