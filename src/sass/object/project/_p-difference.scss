@@ -4,23 +4,56 @@
   padding-block: rem(59) rem(60);
   background-color: #edf9fa;
   background-image: repeating-linear-gradient(90deg, #d8f5f5, #d8f5f5 4px, transparent 4px, transparent 8px);
+  @include mq(md) {
+    padding-block: rem(111) rem(60);
+    background-image: repeating-linear-gradient(90deg, #d8f5f5, #d8f5f5 7px, transparent 7px, transparent 14px);
+  }
 }
 
 .p-difference__ribbon {
   background: $yellow;
-  padding: rem(7) rem(10);
+  padding: rem(6) rem(8);
   text-align: center;
   border-radius: rem(7);
   corner-shape: scoop;
+  @include mq(md) {
+    padding: rem(8) rem(12);
+    border-radius: rem(12);
+  }
 }
 
 .p-difference__title {
-  border-top: 2px dotted $white;
-  border-bottom: 2px dotted $white;
-  padding: rem(5) 0;
+  position: relative;
+  padding: rem(7) 0 rem(9);
   font-size: rem(20);
   font-weight: 900;
   color: $white;
+  @include mq(md) {
+    padding: rem(7) 0 rem(12);
+    font-size: rem(38);
+  }
+}
+
+.p-difference__title::before,
+.p-difference__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: rem(4);
+  background: radial-gradient(circle, $white 1px, transparent 1px);
+  background-size: rem(4) rem(4);
+  @include mq(md) {
+    background-size: rem(8) rem(4);
+  }
+}
+
+.p-difference__title::before {
+  top: 0;
+}
+
+.p-difference__title::after {
+  bottom: 0;
 }
 
 .p-difference__cards {
@@ -28,5 +61,6 @@
   @include mq(md) {
     display: flex;
     justify-content: space-between;
+    margin-top: rem(60);
   }
 }

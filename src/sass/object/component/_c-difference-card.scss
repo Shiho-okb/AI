@@ -132,6 +132,7 @@
   @include mq(md) {
     padding-inline: rem(33);
     padding-block: rem(11) rem(10);
+    margin-top: 0;
     order: 1;
   }
 }
