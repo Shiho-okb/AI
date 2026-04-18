@@ -11,7 +11,6 @@
   }
 }
 
-/* ラベル */
 .c-difference-card__label {
   display: inline-block;
   background: $blue;
@@ -39,14 +38,12 @@
   }
 }
 
-/* 各イラスト */
 .c-difference-card__item {
   width: 30%;
   text-align: center;
   position: relative;
 }
 
-/* 画像 */
 .c-difference-card__image {
   width: rem(94);
   height: rem(141);
@@ -87,7 +84,6 @@
   }
 }
 
-/* テキスト */
 .c-difference-card__text {
   font-family: $font-sub;
   font-size: rem(10);

@@ -64,3 +64,167 @@
     margin-top: rem(60);
   }
 }
+
+
+/*-------------------------------------------
+テーブル
+-------------------------------------------*/
+.p-difference__table-wrapper {
+  margin-top: rem(35);
+}
+
+/* 横スクロール */
+.p-difference__scroll {
+  overflow-x: auto;
+}
+
+/* テーブル */
+.c-table {
+  border-collapse: collapse;
+  min-width: rem(630);
+  width: 100%;
+  text-align: center;
+}
+
+// 共通
+.c-table th {
+  color: $white;
+  font-size: rem(14);
+  font-weight: 900;
+  line-height: calc(18 / 14);
+}
+
+/* ヘッダー */
+.c-table thead th {
+  padding-block: rem(7);
+  padding-inline: rem(27);
+}
+
+.c-table__transparent {
+  background-color: transparent;
+}
+
+.c-table__accent {
+  background-color: $pink;
+  width: rem(177);
+}
+
+.c-table__normal {
+  background-color: $blue;
+  width: rem(177);
+}
+
+.c-table__normal--medical {
+  border-left: 3px solid #e8e8e8;
+  border-right: 3px solid #e8e8e8;
+}
+
+/* 左の項目列 */
+.c-table tbody th {
+  border: 3px solid #e8e8e8;
+  background-color: #b2b2b2;
+  color: $white;
+  font-size: rem(14);
+  font-weight: 900;
+  line-height: calc(16 / 14);
+  width: rem(91);
+  height: rem(79);
+  padding-block: rem(7);
+  padding-inline: rem(7);
+}
+
+/* セル */
+.c-table td {
+  border: 3px solid #e8e8e8;
+  background: $white;
+  width: rem(177);
+  padding-block: rem(7);
+  padding-inline: rem(7);
+}
+
+/* 強調列 */
+.c-table td.c-table__highlight {
+  background-color: $lightpink;
+}
+
+.c-table p {
+  font-family: $font-sub;
+  font-size: rem(10);
+  font-weight: 500;
+  line-height: calc(14 / 10);
+}
+
+/* マーク共通 */
+.c-table__mark {
+  display: block;
+  margin: 0 auto 5px;
+}
+
+/* ◎ */
+.c-table__mark--circle {
+  width: rem(25);
+  height: rem(25);
+  position: relative;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.c-table__mark--circle::before {
+  content: "";
+  width: rem(18);
+  height: rem(18);
+  position: absolute;
+  top: rem(1.5);
+  left: rem(1.5);
+  border: 1px solid $pink;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* ⚪︎ */
+.c-table__mark--single {
+  width: rem(25);
+  height: rem(25);
+  position: relative;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* △ */
+.c-table__mark--triangle {
+  width: rem(24);
+  height: rem(24);
+  background-image: url("/images/difference/difference_07.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* × */
+.c-table__mark--cross {
+  position: relative;
+  width: rem(24);
+  height: rem(24);
+}
+
+.c-table__mark--cross::before,
+.c-table__mark--cross::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: rem(2);
+  height: rem(24);
+  border-radius: 999px;
+  background: #808080;
+}
+
+.c-table__mark--cross::before {
+  transform: rotate(45deg);
+}
+
+.c-table__mark--cross::after {
+  transform: rotate(-45deg);
+}

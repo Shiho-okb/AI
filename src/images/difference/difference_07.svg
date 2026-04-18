@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.73 25.73">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: gray;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.79px;
+      }
+    </style>
+  </defs>
+  <g id="_料金表" data-name="料金表">
+    <g id="_表" data-name="表">
+      <polygon class="cls-1" points="12.86 .89 .89 24.83 24.83 24.83 12.86 .89"/>
+    </g>
+  </g>
+</svg>
