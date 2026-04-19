@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-fee {
-  padding-block: rem(63) rem(65);
+  padding-block: rem(63) rem(67);
   @include mq(md) {
     padding-block: rem(111) rem(133);
   }
@@ -61,7 +61,7 @@
   font-size: rem(13);
   font-weight: 500;
   line-height: calc(21 / 13);
-  margin-top: rem(15);
+  margin-top: rem(13);
   @include mq(md) {
     width: fit-content;
     margin-left: auto;

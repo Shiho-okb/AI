@@ -106,47 +106,6 @@
   margin-bottom: rem(15);
 }
 
-// .c-table::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   // left: rem(91);
-//   // width: rem(177);
-//   left: var(--col-left);
-//   width: var(--col-width);
-//   border-left: 3px solid $pink;
-//   border-right: 3px solid $pink;
-//   pointer-events: none;
-//   @include mq(md) {
-//     // left: rem(143);
-//     // width: rem(283);
-//     border-left: 5px solid $pink;
-//     border-right: 5px solid $pink;
-//   }
-// }
-
-// .c-table::after {
-//   content: "";
-//   position: absolute;
-//   // left: rem(91);
-//   // width: rem(177);
-//   left: var(--col-left);
-//   width: var(--col-width);
-//   top: rem(50);
-//   bottom: 0;
-//   border-top: 3px solid $pink;
-//   border-bottom: 3px solid $pink;
-//   pointer-events: none;
-//   @include mq(md) {
-//     // left: rem(143);
-//     // width: rem(283);
-//     top: rem(80);
-//     border-top: 5px solid $pink;
-//     border-bottom: 5px solid $pink;
-//   }
-// }
-
 .c-table__highlight::before {
   content: "";
   position: absolute;
