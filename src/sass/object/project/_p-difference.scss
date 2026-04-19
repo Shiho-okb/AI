@@ -71,6 +71,9 @@
 -------------------------------------------*/
 .p-difference__table-wrapper {
   margin-top: rem(36);
+  @include mq(md) {
+    margin-top: rem(75);
+  }
 }
 
 /* 横スクロール */
@@ -115,6 +118,12 @@
   border-left: 3px solid $pink;
   border-right: 3px solid $pink;
   pointer-events: none;
+  @include mq(md) {
+    left: rem(143);
+    width: rem(283);
+    border-left: 5px solid $pink;
+    border-right: 5px solid $pink;
+  }
 }
 
 .c-table::after {
@@ -127,6 +136,13 @@
   border-top: 3px solid $pink;
   border-bottom: 3px solid $pink;
   pointer-events: none;
+  @include mq(md) {
+    left: rem(143);
+    width: rem(283);
+    top: rem(80);
+    border-top: 5px solid $pink;
+    border-bottom: 5px solid $pink;
+  }
 }
 
 // 共通
@@ -135,12 +151,20 @@
   font-size: rem(14);
   font-weight: 900;
   line-height: calc(18 / 14);
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: calc(27 / 20);
+  }
 }
 
 /* ヘッダー */
 .c-table thead th {
   padding-block: rem(7);
   padding-inline: rem(27);
+  @include mq(md) {
+    padding-block: rem(13);
+    padding-inline: rem(44);
+  }
 }
 
 .c-table__transparent {
@@ -151,16 +175,26 @@
   position: relative;
   background-color: $pink;
   width: rem(177);
+  @include mq(md) {
+    width: rem(283);
+  }
 }
 
 .c-table__normal {
   background-color: $blue;
   width: rem(177);
+  @include mq(md) {
+    width: rem(283);
+  }
 }
 
 .c-table__normal--medical {
   border-left: 3px solid #e8e8e8;
   border-right: 3px solid #e8e8e8;
+  @include mq(md) {
+    border-left: 5px solid #e8e8e8;
+    border-right: 5px solid #e8e8e8;
+  }
 }
 
 /* 左の項目列 */
@@ -176,6 +210,16 @@
   height: rem(79);
   padding-block: rem(7);
   padding-inline: rem(7);
+  @include mq(md) {
+    border: 5px solid #e8e8e8;
+    border-right: 10px solid #e8e8e8;
+    font-size: rem(18);
+    line-height: calc(20 / 18);
+    width: rem(143);
+    height: rem(125);
+    padding-block: rem(22);
+    padding-inline: rem(22);
+  }
 }
 
 /* セル */
@@ -185,6 +229,10 @@
   width: rem(177);
   padding-block: rem(7);
   padding-inline: rem(7);
+  @include mq(md) {
+    border: 5px solid #e8e8e8;
+    width: rem(283);
+  }
 }
 
 /* 強調列 */
@@ -197,12 +245,20 @@
   font-size: rem(10);
   font-weight: 500;
   line-height: calc(14 / 10);
+  margin-top: rem(3);
+  @include mq(md) {
+    font-size: rem(13);
+    line-height: calc(20 / 13);
+    margin-top: rem(10);
+    text-align: left;
+    padding-inline: rem(33) rem(23);
+  }
 }
 
 /* マーク共通 */
 .c-table__mark {
   display: block;
-  margin: 0 auto 5px;
+  margin: 0 auto;
 }
 
 /* ◎ */
@@ -213,6 +269,11 @@
   border: 2px solid $pink;
   border-radius: 50%;
   box-sizing: border-box;
+  @include mq(md) {
+    width: rem(40);
+    height: rem(40);
+    border: 3px solid $pink;
+  }
 }
 
 .c-table__mark--circle::before {
@@ -220,11 +281,18 @@
   width: rem(18);
   height: rem(18);
   position: absolute;
+  border: 1px solid $pink;
   top: rem(1.5);
   left: rem(1.5);
-  border: 1px solid $pink;
   border-radius: 50%;
   box-sizing: border-box;
+  @include mq(md) {
+    width: rem(28);
+    height: rem(28);
+    border: 2px solid $pink;
+    top: rem(2.8);
+    left: rem(2.8);
+  }
 }
 
 /* ⚪︎ */
@@ -235,6 +303,11 @@
   border: 2px solid $pink;
   border-radius: 50%;
   box-sizing: border-box;
+  @include mq(md) {
+    width: rem(40);
+    height: rem(40);
+    border: 3px solid $pink;
+  }
 }
 
 /* △ */
@@ -245,6 +318,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  @include mq(md) {
+    width: rem(38);
+    height: rem(38);
+  }
 }
 
 /* × */
@@ -252,6 +329,10 @@
   position: relative;
   width: rem(24);
   height: rem(24);
+  @include mq(md) {
+    width: rem(44);
+    height: rem(44);
+  }
 }
 
 .c-table__mark--cross::before,
@@ -259,11 +340,16 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 9px;
+  left: rem(12);
   width: rem(2);
   height: rem(24);
   border-radius: 999px;
   background: #808080;
+  @include mq(md) {
+    left: rem(22);
+    width: rem(3);
+    height: rem(44);
+  }
 }
 
 .c-table__mark--cross::before {
