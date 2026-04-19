@@ -77,3 +77,24 @@
     margin: rem(51) auto 0;
   }
 }
+
+/*-------------------------------------------
+p-fee--second
+-------------------------------------------*/
+.p-fee--second .p-fee__cards {
+  @include mq(md) {
+    margin-top: rem(36);
+  }
+}
+
+.p-fee--second .c-fee-card__lead--perfect {
+  @include mq(md) {
+    margin-top: rem(20);
+  }
+}
+
+.p-fee--second .p-fee__note {
+  @include mq(md) {
+    margin-left: 0;
+  }
+}

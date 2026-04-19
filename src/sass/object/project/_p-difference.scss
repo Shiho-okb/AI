@@ -5,7 +5,7 @@
   background-color: #edf9fa;
   background-image: repeating-linear-gradient(90deg, #d8f5f5, #d8f5f5 4px, transparent 4px, transparent 8px);
   @include mq(md) {
-    padding-block: rem(111) rem(60);
+    padding-block: rem(111) rem(104);
     background-image: repeating-linear-gradient(90deg, #d8f5f5, #d8f5f5 7px, transparent 7px, transparent 14px);
   }
 }
@@ -239,11 +239,13 @@ tr:last-child .c-table__highlight::after {
   border: rem(3) solid #e8e8e8;
   background: $white;
   width: rem(177);
-  padding-block: rem(7);
+  padding-block: rem(10) rem(7);
   padding-inline: rem(7);
+  vertical-align: top;
   @include mq(md) {
     border: rem(5) solid #e8e8e8;
     width: rem(283);
+    padding-block: rem(13);
   }
 }
 
@@ -258,7 +260,7 @@ tr:last-child .c-table__highlight::after {
   font-size: rem(10);
   font-weight: 500;
   line-height: calc(14 / 10);
-  margin-top: rem(3);
+  margin-top: rem(6);
   @include mq(md) {
     font-size: rem(13);
     line-height: calc(20 / 13);
