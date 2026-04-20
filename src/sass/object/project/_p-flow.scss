@@ -3,6 +3,9 @@
 .p-flow {
   position: relative;
   padding-block: rem(69) rem(74);
+  @include mq(md) {
+    padding-block: rem(190) rem(190);
+  }
 }
 
 .p-flow::before {
@@ -17,6 +20,12 @@
   background-position: center center;
   background-size: cover;
   z-index: -100;
+  @include mq(md) {
+    background: url(../images/flow/flow_01PC.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
 }
 
 .p-flow__title {
@@ -26,6 +35,9 @@
   color: $pink;
   text-align: center;
   margin-top: rem(-3);
+  @include mq(md) {
+    font-size: rem(38);
+  }
 }
 
 .p-flow__title::after {
@@ -42,6 +54,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  @include mq(md) {
+    width: rem(400);
+    aspect-ratio: 400 / 16;
+    bottom: rem(-23);
+  }
 }
 
 .p-flow-cards {
@@ -53,6 +70,7 @@
   margin-top: rem(50);
   @include mq(md) {
     gap: rem(53.5);
+    margin-top: rem(87);
   }
 }
 
@@ -70,4 +88,11 @@
   background-position: center center;
   background-size: cover;
   z-index: 100;
+  @include mq(md) {
+    top: rem(-323);
+    left: rem(-188);
+    width: rem(392);
+    height: rem(260);
+    aspect-ratio: 392 / 260;
+  }
 }
