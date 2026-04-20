@@ -81,6 +81,13 @@
 /*-------------------------------------------
 p-fee--second
 -------------------------------------------*/
+.p-fee--second {
+  padding-block: rem(63) rem(50);
+  @include mq(md) {
+    padding-block: rem(111) rem(133);
+  }
+}
+
 .p-fee--second .p-fee__cards {
   @include mq(md) {
     margin-top: rem(36);
