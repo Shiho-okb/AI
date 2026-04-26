@@ -89,7 +89,10 @@
 
 .p-reason__lead::before {
   left: 25%;
-  background: url(../images/reason/reason_01.svg) no-repeat center / contain;
+  background: url(../images/reason/reason_01.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   @include mq(md) {
     left: 34.5%;
   }
@@ -97,7 +100,10 @@
 
 .p-reason__lead::after {
   right: 25%;
-  background: url(../images/reason/reason_02.svg) no-repeat center / contain;
+  background: url(../images/reason/reason_02.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   @include mq(md) {
     right: 34.5%;
   }

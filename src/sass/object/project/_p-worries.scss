@@ -91,12 +91,18 @@
 
 .p-worries__title span::before {
   left: 0;
-  background: url(../images/worries/worries_01.png) no-repeat center / contain;
+  background: url(../images/worries/worries_01.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .p-worries__title span::after {
   right: 0;
-  background: url(../images/worries/worries_02.png) no-repeat center / contain;
+  background: url(../images/worries/worries_02.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .p-worries__list {
@@ -147,7 +153,10 @@
   left: rem(2);
   width: rem(17);
   height: rem(17);
-  background: url(../images/worries/worries_03.png) no-repeat center / contain;
+  background: url(../images/worries/worries_03.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   @include mq(md) {
     top: rem(2);
     width: rem(21);
