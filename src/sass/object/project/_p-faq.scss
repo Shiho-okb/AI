@@ -1,0 +1,234 @@
+@use "global" as *;
+
+.p-faq {
+  position: relative;
+  padding-block: rem(23) rem(67);
+}
+
+.p-faq::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(-28);
+  right: 0;
+  width: rem(251);
+  height: auto;
+  aspect-ratio: 251 / 43;
+  background: url(../images/faq/faq_01.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include mq(md) {
+  }
+}
+
+.p-faq::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: rem(278);
+  height: auto;
+  aspect-ratio: 278 / 34;
+  background: url(../images/faq/faq_02.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include mq(md) {
+  }
+}
+
+/* タイトル */
+.p-faq__title {
+  text-align: center;
+}
+
+.p-faq__title-main {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: "Shippori Mincho", serif;
+  color: #dbacc1;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  transform: skewX(-5deg);
+  margin-left: rem(13);
+}
+
+.p-faq__q {
+  font-size: rem(41);
+}
+
+.p-faq__and {
+  font-size: rem(30);
+  transform: translateY(rem(6));
+}
+
+.p-faq__a {
+  font-size: rem(41);
+  transform: translateY(rem(10));
+}
+
+.p-faq__title-sub {
+  display: block;
+  position: relative;
+  font-size: rem(18);
+  font-weight: 900;
+  color: #c6618c;
+  margin-top: rem(6);
+}
+
+.p-faq__title-sub::before,
+.p-faq__title-sub::after {
+  content: "";
+  position: absolute;
+  bottom: rem(8);
+  width: rem(107);
+  height: rem(6);
+  @include mq(md) {
+  }
+}
+
+.p-faq__title-sub::before {
+  left: 0;
+  background: url(../images/faq/faq_03.png) no-repeat center / contain;
+  @include mq(md) {
+  }
+}
+
+.p-faq__title-sub::after {
+  right: 0;
+  background: url(../images/faq/faq_03.png) no-repeat center / contain;
+  @include mq(md) {
+  }
+}
+
+.p-faq__items {
+  margin-top: rem(29);
+  display: flex;
+  flex-direction: column;
+  gap : rem(18);
+}
+
+/* 質問 */
+.p-faq-item__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: rem(14) rem(15);
+  gap: rem(9);
+  // background-color: #fdf5f6;
+  background-color: $blue;
+  @include mq(md) {
+    cursor: pointer;
+  }
+}
+
+/* Q・Aアイコン */
+.p-faq-item__icon {
+  width: rem(32);
+  height: rem(32);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shippori Mincho", serif;
+  font-size: rem(18);
+  font-weight: 400;
+  color: $white;
+  flex-shrink: 0;
+}
+
+.p-faq-item__icon--q {
+  background: #cb4583;
+}
+
+.p-faq-item__icon--a {
+  background: $blue;
+}
+
+/* テキスト */
+.p-faq-item__text {
+  font-size: rem(16);
+  font-weight: 900;
+  line-height: calc(28 / 16);
+  flex: 1;
+  text-align: left;
+}
+
+/* + / - */
+.p-faq-item__toggle {
+  position: relative;
+  width: rem(16);
+  height: rem(16);
+  transition: transform 0.3s ease;
+}
+
+.p-faq-item__toggle::before,
+.p-faq-item__toggle::after {
+  content: "";
+  position: absolute;
+  background: #c6618c;
+  border-radius: 999px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.p-faq-item__toggle::before {
+  width: rem(16);
+  height: rem(2);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.p-faq-item__toggle::after {
+  width: rem(2);
+  height: rem(16);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.p-faq-item.is-open .p-faq-item__toggle {
+  transform: rotate(180deg);
+}
+
+.p-faq-item.is-open .p-faq-item__toggle::after {
+  opacity: 0;
+}
+
+/* 回答 */
+.p-faq-item__answer {
+  display: none;
+  position: relative;
+  // background-color: #fdf5f6;
+  background-color: $blue;
+}
+
+.p-faq-item__answer::after {
+  content: "";
+  position: absolute;
+  top: rem(-2);
+  left: rem(15);
+  width: calc(100% - rem(30));
+  height: rem(1);
+  background: $pink;
+}
+
+.p-faq-item.is-open .p-faq-item__answer {
+  display: block;
+}
+
+.p-faq-item__answer-inner {
+  display: flex;
+  padding: rem(13.5) rem(15);
+  gap: rem(10);
+}
+
+.p-faq-item__answer p {
+  font-size: rem(16);
+  font-weight: 900;
+  line-height: calc(22 / 16);
+  flex: 1;
+  text-align: left;
+}

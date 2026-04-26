@@ -67,6 +67,15 @@ jQuery(function ($) {
   });
 
 
+  /* ===== アコーディオンメニュー ===== */
+  document.querySelectorAll(".p-faq-item__question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".p-faq-item");
+      item.classList.toggle("is-open");
+    });
+  });
+
+
   /* ===== フェードイン ===== */
   function checkFadeIn() {
     const wHeight = $(window).height();
