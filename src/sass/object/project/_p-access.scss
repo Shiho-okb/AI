@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.p-access {
+  background: $pink;
+  color: $white;
+  padding-block: rem(54) rem(117);
+}
+
+.p-access__inner {
+  max-width: rem(600);
+  margin: 0 auto;
+}
+
+.p-access__title {
+  position: relative;
+  text-align: center;
+  font-size: rem(20);
+  font-weight: 400;
+}
+
+.p-access__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: rem(-8);
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(170);
+  height: auto;
+  aspect-ratio: 170 / 7;
+  background: url(../images/mv/mv_02.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  @include mq(md) {
+  }
+}
+
+.p-access__info {
+  position: relative;
+  padding: rem(144) rem(15) rem(25);
+  margin-top: rem(38);
+  z-index: 1;
+}
+
+.p-access__info::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 375 / 200;
+  background: url(../images/access/access_01.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: -100;
+  @include mq(md) {
+  }
+}
+
+.p-access__info::after {
+  content: "";
+  position: absolute;
+  top: rem(139);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(51, 51, 51, 0.5);
+  z-index: -100;
+}
+
+.p-access__item {
+  text-align: center;
+  padding-block: rem(13) rem(5);
+  border-bottom: rem(1) solid $yellow;
+}
+
+.p-access__item dt {
+  font-size: rem(16);
+  line-height: calc(31 / 16);
+}
+
+.p-access__item dd {
+  font-size: rem(16);
+  line-height: calc(22 / 16);
+  margin-top: rem(3);
+}
+
+.p-access__item--address dd {
+  max-width: rem(220);
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* ACCESS */
+.p-access__heading {
+  position: relative;
+  font-size: rem(20);
+  font-weight: 400;
+  margin-top: rem(53);
+}
+
+.p-access__map {
+  position: absolute;
+  width: rem(345);
+  height: rem(200);
+  margin-top: rem(17);
+}
+
+/* MAP */
+.p-access__map iframe {
+  border: none;
+}
