@@ -1,14 +1,13 @@
 @use "global" as *;
 
 .p-access {
+  position: relative;
   background: $pink;
   color: $white;
   padding-block: rem(54) rem(117);
-}
-
-.p-access__inner {
-  max-width: rem(600);
-  margin: 0 auto;
+  @include mq(md) {
+    padding-block: rem(123) rem(255);
+  }
 }
 
 .p-access__title {
@@ -16,6 +15,9 @@
   text-align: center;
   font-size: rem(20);
   font-weight: 400;
+  @include mq(md) {
+    font-size: rem(38);
+  }
 }
 
 .p-access__title::after {
@@ -33,6 +35,37 @@
   background-position: center center;
   background-size: cover;
   @include mq(md) {
+    bottom: rem(-26);
+    width: rem(482);
+    aspect-ratio: 482 / 19;
+  }
+}
+
+.p-access::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: rem(123);
+  left: 0;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  height: auto;
+  aspect-ratio: 375 / 200;
+  background: url(../images/access/access_01.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 0;
+  @include mq(md) {
+    top: rem(267);
+    width: 100%;
+    margin: 0;
+    height: rem(530);
+    aspect-ratio: 1440 / 530;
+    background: url(../images/access/access_01PC.webp);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 }
 
@@ -41,24 +74,10 @@
   padding: rem(144) rem(15) rem(25);
   margin-top: rem(38);
   z-index: 1;
-}
-
-.p-access__info::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0 calc(50% - 50vw);
-  width: 100vw;
-  height: auto;
-  aspect-ratio: 375 / 200;
-  background: url(../images/access/access_01.webp);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  z-index: -100;
   @include mq(md) {
+    padding: rem(152) rem(50) rem(136);
+    margin-top: rem(87);
+    max-width: rem(550);
   }
 }
 
@@ -71,47 +90,85 @@
   left: 0;
   background: rgba(51, 51, 51, 0.5);
   z-index: -100;
+  @include mq(md) {
+    top: 0;
+  }
 }
 
 .p-access__item {
   text-align: center;
   padding-block: rem(13) rem(5);
   border-bottom: rem(1) solid $yellow;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    padding-block: rem(12) rem(9);
+    padding-left: rem(20);
+  }
+}
+
+.p-access__item--address {
+  @include mq(md) {
+    align-items: flex-start;
+  }
 }
 
 .p-access__item dt {
   font-size: rem(16);
   line-height: calc(31 / 16);
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: calc(31 / 20);
+    text-align: left;
+    width: rem(115);
+  }
 }
 
 .p-access__item dd {
   font-size: rem(16);
   line-height: calc(22 / 16);
   margin-top: rem(3);
+  @include mq(md) {
+    font-size: rem(20);
+    line-height: calc(31 / 20);
+    margin-top: 0;
+  }
 }
 
 .p-access__item--address dd {
   max-width: rem(220);
   text-align: left;
   margin: 0 auto;
+  @include mq(md) {
+    max-width: unset;
+    margin: 0;
+  }
 }
 
-/* ACCESS */
 .p-access__heading {
   position: relative;
   font-size: rem(20);
   font-weight: 400;
   margin-top: rem(53);
+  @include mq(md) {
+    font-size: rem(38);
+    margin-top: rem(73);
+  }
 }
 
 .p-access__map {
   position: absolute;
-  width: rem(345);
-  height: rem(200);
-  margin-top: rem(17);
 }
 
 /* MAP */
 .p-access__map iframe {
   border: none;
+  width: rem(345);
+  height: rem(200);
+  margin-top: rem(17);
+  @include mq(md) {
+    width: rem(1000);
+    height: rem(450);
+    margin-top: rem(23);
+  }
 }
