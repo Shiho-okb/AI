@@ -22,8 +22,8 @@
 .c-reason-card__body {
   position: relative;
   padding: rem(15) rem(7) rem(15);
-  border: 1px solid $pink02;
-  outline: 1px solid $pink02;
+  border: rem(1) solid $pink02;
+  outline: rem(1) solid $pink02;
   outline-offset: rem(2);
   margin-top: rem(16);
   @include mq(md) {

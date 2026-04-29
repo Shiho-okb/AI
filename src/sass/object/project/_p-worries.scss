@@ -137,12 +137,12 @@
   top: rem(5);
   width: rem(16);
   height: rem(16);
-  border: 0.4px solid $black;
+  border: rem(0.4) solid $black;
   @include mq(md) {
     top: rem(2);
     width: rem(18);
     height: rem(18);
-    border: 0.45px solid $black;
+    border: rem(0.45) solid $black;
   }
 }
 

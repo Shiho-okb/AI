@@ -4,7 +4,7 @@
   position: relative;
   background: $white;
   padding-bottom: rem(10);
-  border: 1px solid $yellow;
+  border: rem(1) solid $yellow;
   counter-increment: flow;
   @include mq(md) {
   }

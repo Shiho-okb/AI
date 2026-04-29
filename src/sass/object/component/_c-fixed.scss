@@ -22,7 +22,7 @@
 
 .c-fixed__item {
   height: rem(74);
-  border: 1.5px solid $white;
+  border: rem(1.5) solid $white;
   border-radius: rem(10) rem(10) 0 0;
   display: inline-flex;
   align-items: center;
