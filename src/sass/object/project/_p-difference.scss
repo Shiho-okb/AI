@@ -79,6 +79,9 @@
 /* 横スクロール */
 .p-difference__scroll {
   overflow-x: auto;
+  @include mq(md) {
+    overflow-x: hidden;
+  }
 }
 
 /* =========================
