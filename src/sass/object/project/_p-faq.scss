@@ -17,7 +17,7 @@
   width: rem(251);
   height: auto;
   aspect-ratio: 251 / 43;
-  background: url(../images/faq/faq_01.png);
+  background-image: url("../images/faq/faq_01.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -35,7 +35,7 @@
   width: rem(278);
   height: auto;
   aspect-ratio: 278 / 34;
-  background: url(../images/faq/faq_02.png);
+  background-image: url("../images/faq/faq_02.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -119,12 +119,12 @@
 
 .p-faq__title-sub::before {
   left: 0;
-  background: url(../images/faq/faq_03.png);
+  background-image: url("../images/faq/faq_03.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   @include mq(md) {
-    background: url(../images/faq/faq_03PC.png);
+    background-image: url("../images/faq/faq_03PC.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -133,12 +133,12 @@
 
 .p-faq__title-sub::after {
   right: 0;
-  background: url(../images/faq/faq_03.png);
+  background-image: url("../images/faq/faq_03.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   @include mq(md) {
-    background: url(../images/faq/faq_03PC.png);
+    background-image: url("../images/faq/faq_03PC.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

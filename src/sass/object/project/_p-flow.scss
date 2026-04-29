@@ -14,14 +14,14 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  background: url(../images/flow/flow_01.png);
+  background-image: url("../images/flow/flow_01.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
   clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%);
   z-index: -100;
   @include mq(md) {
-    background: url(../images/flow/flow_01PC.png);
+    background-image: url("../images/flow/flow_01PC.png");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% 100%;
@@ -51,7 +51,7 @@
   width: rem(170);
   height: auto;
   aspect-ratio: 170 / 7;
-  background: url(../images/mv/mv_02.png);
+  background-image: url("../images/mv/mv_02.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -84,7 +84,7 @@
   width: rem(162);
   height: rem(107);
   aspect-ratio: 162 / 107;
-  background: url(../images/flow/flow_02.png);
+  background-image: url("../images/flow/flow_02.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

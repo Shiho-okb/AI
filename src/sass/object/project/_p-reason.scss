@@ -47,7 +47,7 @@
   width: rem(110);
   height: rem(116);
   aspect-ratio: 110 / 116;
-  background: url(../images/reason/reason_07.png);
+  background-image: url("../images/reason/reason_07.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -89,7 +89,7 @@
 
 .p-reason__lead::before {
   left: 25%;
-  background: url(../images/reason/reason_01.svg);
+  background-image: url("../images/reason/reason_01.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -100,7 +100,7 @@
 
 .p-reason__lead::after {
   right: 25%;
-  background: url(../images/reason/reason_02.svg);
+  background-image: url("../images/reason/reason_02.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;

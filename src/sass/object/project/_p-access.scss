@@ -30,7 +30,7 @@
   width: rem(170);
   height: auto;
   aspect-ratio: 170 / 7;
-  background: url(../images/mv/mv_02.png);
+  background-image: url("../images/mv/mv_02.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -51,7 +51,7 @@
   margin: 0 calc(50% - 50vw);
   height: auto;
   aspect-ratio: 375 / 200;
-  background: url(../images/access/access_01.webp);
+  background-image: url("../images/access/access_01.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -62,7 +62,7 @@
     margin: 0;
     height: rem(530);
     aspect-ratio: 1440 / 530;
-    background: url(../images/access/access_01PC.webp);
+    background-image: url("../images/access/access_01PC.webp");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
