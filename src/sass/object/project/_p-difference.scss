@@ -13,14 +13,14 @@
 .p-difference__ribbon {
   width: 100%;
   height: auto;
-  background-image: url("/images/difference/difference_08.svg");
+  background-image: url("../images/difference/difference_08.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   padding: rem(6) rem(8);
   text-align: center;
   @include mq(md) {
-    background-image: url("/images/difference/difference_08PC.svg");
+    background-image: url("../images/difference/difference_08PC.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
