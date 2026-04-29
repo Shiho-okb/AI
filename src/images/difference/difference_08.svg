@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345 58">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccaf3a;
+      }
+    </style>
+  </defs>
+  <g id="_料金表" data-name="料金表">
+    <path class="cls-1" d="M338,58H7c0-3.87-3.13-7-7-7V7c3.87,0,7-3.13,7-7h331c0,3.87,3.13,7,7,7v44c-3.87,0-7,3.13-7,7Z"/>
+  </g>
+</svg>

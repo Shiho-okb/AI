@@ -11,14 +11,20 @@
 }
 
 .p-difference__ribbon {
-  background: $yellow;
+  width: 100%;
+  height: auto;
+  background-image: url("/images/difference/difference_08.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   padding: rem(6) rem(8);
   text-align: center;
-  border-radius: rem(7);
-  corner-shape: scoop;
   @include mq(md) {
+    background-image: url("/images/difference/difference_08PC.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: rem(8) rem(12);
-    border-radius: rem(12);
   }
 }
 
