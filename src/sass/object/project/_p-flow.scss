@@ -2,7 +2,7 @@
 
 .p-flow {
   position: relative;
-  padding-block: rem(69) rem(74);
+  padding-block: rem(69) clamp(74px, 21.4vw, 164px);
   @include mq(md) {
     padding-block: rem(190) rem(190);
   }
@@ -17,13 +17,13 @@
   width: 100%;
   background: url(../images/flow/flow_01.png);
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
   z-index: -100;
   @include mq(md) {
     background: url(../images/flow/flow_01PC.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     background-size: cover;
   }
 }
