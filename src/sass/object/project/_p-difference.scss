@@ -257,6 +257,7 @@ tr:last-child .c-table__highlight::after {
 
 .c-table p {
   font-family: $font-sub;
+  color: $black02;
   font-size: rem(10);
   font-weight: 500;
   line-height: calc(14 / 10);

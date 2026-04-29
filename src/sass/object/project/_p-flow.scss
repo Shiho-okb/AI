@@ -2,7 +2,7 @@
 
 .p-flow {
   position: relative;
-  padding-block: rem(69) clamp(74px, 21.4vw, 164px);
+  padding-block: rem(69) clamp(73px, 21.4vw, 164px);
   @include mq(md) {
     padding-block: rem(190) rem(190);
   }
@@ -10,7 +10,6 @@
 
 .p-flow::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,12 +18,14 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  clip-path: polygon(0 2%, 100% 0%, 100% 97%, 0% 100%);
   z-index: -100;
   @include mq(md) {
     background: url(../images/flow/flow_01PC.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: cover;
+    background-size: 100% 100%;
+    clip-path: polygon(0 11%, 100% 0%, 100% 92%, 0% 100%);
   }
 }
 

@@ -2,7 +2,7 @@
 
 .p-faq {
   position: relative;
-  padding-block: rem(23) rem(67);
+  padding-block: rem(17) rem(67);
   @include mq(md) {
     padding-block: rem(20) rem(135);
   }
@@ -12,7 +12,7 @@
   content: "";
   display: block;
   position: absolute;
-  top: rem(-27);
+  top: rem(-30);
   right: 0;
   width: rem(251);
   height: auto;
@@ -200,6 +200,7 @@
   font-size: rem(16);
   font-weight: 900;
   line-height: calc(28 / 16);
+  color: $black;
   flex: 1;
   text-align: left;
   @include mq(md) {
@@ -293,6 +294,7 @@
   font-size: rem(16);
   font-weight: 900;
   line-height: calc(22 / 16);
+  color: $black;
   flex: 1;
   text-align: left;
   @include mq(md) {
