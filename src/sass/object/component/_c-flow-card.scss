@@ -20,7 +20,6 @@
   }
 }
 
-/* STEPラベル */
 .c-flow-card__step {
   position: relative;
   display: inline-block;
@@ -72,7 +71,6 @@
   }
 }
 
-/* STEPの右の三角 */
 .c-flow-card__step::after {
   content: "";
   position: absolute;
@@ -90,7 +88,6 @@
   }
 }
 
-/* タイトル */
 .c-flow-card__title {
   font-size: rem(17);
   font-weight: 900;

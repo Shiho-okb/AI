@@ -10,7 +10,6 @@
   }
 }
 
-/* 六角形 */
 .c-hexagon-card__inner {
   width: 100%;
   height: 100%;
@@ -33,7 +32,6 @@
   }
 }
 
-/* テキスト全体 */
 .c-hexagon-card__text {
   font-size: calc(13 / 375 * 100vw);
   line-height: 1.4;
@@ -145,7 +143,6 @@
   display: flex;
   justify-content: center;
   gap: rem(10);
-  // max-width: rem(707); //あとで確認
   @include mq(md) {
     gap: rem(12);
   }
