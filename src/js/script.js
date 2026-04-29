@@ -154,4 +154,56 @@ jQuery(function ($) {
     setArcText();
   });
 
+
+  /* ===== テーブル ===== */
+  const scrollArea = document.querySelector('.js-table-scroll');
+  const scrollbar = document.querySelector('.p-difference__scrollbar');
+  const thumb = document.querySelector('.p-difference__scrollbar-thumb');
+
+  // 要素がない場合は処理しない（エラー防止）
+  if (!scrollArea || !scrollbar || !thumb) return;
+
+  function updateScrollbar() {
+
+    // PCのときは強制的に非表示
+    if (window.innerWidth >= 768) {
+      scrollbar.style.display = 'none';
+      return;
+    }
+
+    const scrollWidth = scrollArea.scrollWidth;
+    const clientWidth = scrollArea.clientWidth;
+    const scrollable = scrollWidth - clientWidth;
+
+    // スクロール不要なら非表示
+    if (scrollable <= 0) {
+      scrollbar.style.display = 'none';
+      return;
+    }
+
+    scrollbar.style.display = 'block';
+
+    // サムネ幅
+    const thumbWidth = Math.max(
+      (clientWidth / scrollWidth) * scrollbar.clientWidth,
+      40
+    );
+    thumb.style.width = thumbWidth + 'px';
+
+    // スクロール位置
+    const scrollRatio = scrollArea.scrollLeft / scrollable;
+    const moveX = (scrollbar.clientWidth - thumbWidth) * scrollRatio;
+
+    thumb.style.transform = `translateX(${moveX}px)`;
+  }
+
+  // 初期
+  updateScrollbar();
+
+  // スクロール時
+  scrollArea.addEventListener('scroll', updateScrollbar);
+
+  // リサイズ時
+  window.addEventListener('resize', updateScrollbar);
+
 });
