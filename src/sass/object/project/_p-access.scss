@@ -57,15 +57,7 @@
   background-size: cover;
   z-index: 0;
   @include mq(md) {
-    top: rem(267);
-    width: 100%;
-    margin: 0;
-    height: rem(530);
-    aspect-ratio: 1440 / 530;
-    background-image: url("../images/access/access_01PC.webp");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    display: none;
   }
 }
 
@@ -73,11 +65,18 @@
   position: relative;
   padding: rem(144) rem(15) rem(25);
   margin-top: rem(38);
+  margin-inline: rem(15);
   z-index: 1;
   @include mq(md) {
-    padding: rem(152) rem(50) rem(136);
-    margin-top: rem(87);
-    max-width: rem(550);
+    width: 100%;
+    margin-top: rem(90);
+    margin-inline: 0;
+    padding: 0;
+    // aspect-ratio: 1440 / 530;
+    background-image: url("../images/access/access_01PC.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 }
 
@@ -91,7 +90,31 @@
   background: rgba(51, 51, 51, 0.5);
   z-index: -100;
   @include mq(md) {
-    top: 0;
+    content: none;
+  }
+}
+
+.p-access__info-wrapper {
+  @include mq(md) {
+    max-width: $innerWidth + $padding-pc * 2;
+    padding-right: rem(strip-unit($padding-pc));
+    padding-left: rem(strip-unit($padding-pc));
+    margin: 0 auto;
+    height: 100%;
+  }
+}
+
+.p-access__list {
+  @include mq(md) {
+    background: rgba(51, 51, 51, 0.5);
+    height: 100%;
+    width: fit-content;
+    min-width: rem(552);
+    min-height: rem(530);
+    padding: 0 rem(52);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
