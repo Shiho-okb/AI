@@ -32,7 +32,21 @@
 .c-fixed__item--phonenumber {
   width: 42%;
   background-color: $pink;
+}
+
+.c-fixed__item a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.c-fixed__item--phonenumber a {
   padding-left: rem(25);
+}
+
+.c-fixed__item--counseling a {
+  justify-content: center;
 }
 
 .c-fixed__phonenumber {

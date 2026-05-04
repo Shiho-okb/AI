@@ -167,6 +167,18 @@
   }
 }
 
+.p-access__item a {
+  display: block;
+  @include mq(md) {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.p-access__tel {
+  display: contents;
+}
+
 .p-access__heading {
   position: relative;
   position: relative;
