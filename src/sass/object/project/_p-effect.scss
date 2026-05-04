@@ -147,6 +147,7 @@
   width: 100%;
   height: rem(1.2);
   background: #b29933;
+  border-radius: 999px;
   @include mq(md) {
     height: rem(3);
   }

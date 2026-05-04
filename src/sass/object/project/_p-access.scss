@@ -147,12 +147,29 @@
 
 .p-access__heading {
   position: relative;
+  position: relative;
   font-size: rem(20);
   font-weight: 400;
   margin-top: rem(53);
   @include mq(md) {
     font-size: rem(38);
     margin-top: rem(73);
+  }
+}
+
+.p-access__heading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(83);
+  width: rem(12);
+  height: rem(1);
+  background: $white;
+  @include mq(md) {
+    width: rem(27);
+    height: rem(2.6);
+    left: rem(158);
   }
 }
 

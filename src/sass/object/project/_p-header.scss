@@ -276,7 +276,6 @@
 .p-header__phonenumber-hours {
   @include mq(md) {
     font-size: calc(14 / 1440 * 100vw);
-    font-weight: 700;
     line-height: calc(25 / 14);
     letter-spacing: .0;
   }

@@ -20,6 +20,7 @@
   height: rem(15);
   background-color: $black;
   transform-origin: center;
+  border-radius: 999px;
   @include mq(md) {
     height: rem(22);
   }
