@@ -52,6 +52,7 @@
     background-image: url("../images/mv/mv_01PC.png");
     background-repeat: no-repeat;
     background-position: top center;
+    background-position: right clamp(-120px, calc((1440px - 100vw) * -0.3), 0px) center;
     background-size: cover;
   }
 }
@@ -70,7 +71,7 @@
     writing-mode: vertical-rl;
     position: absolute;
     top: rem(22);
-    right: calc(126 / 1440 * 100vw);
+    right: clamp(0px, calc((100vw - 768px) * 0.1875), 126px);
     font-size: rem(86);
     letter-spacing: 0;
     margin-top: 0;

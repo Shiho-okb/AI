@@ -18,7 +18,6 @@
     height: 100%;
     padding-left: 0;
     margin-left: calc(118 / 1440 * 100vw);
-    margin-right: calc(120 / 1440 * 100vw);
   }
 }
 
@@ -104,7 +103,7 @@
     display: flex;
     position: static;
     height: inherit;
-    width: calc(863 / 1440 * 100vw);
+    width: calc(967 / 1440 * 100vw);
     padding: 0;
     align-items: center;
     background-color: transparent;
@@ -139,7 +138,7 @@
     display: flex;
     width: auto;
     height: inherit;
-    margin-left: rem(24);
+    margin-left: rem(10);
   }
 }
 
@@ -162,7 +161,7 @@
   @include mq(md) {
     display: flex;
     align-items: center;
-    font-size: calc(13 / 1440 * 100vw);
+    font-size: clamp(10px, calc(13 / 1440 * 100vw), 999px);
     line-height: 1;
     color: $white;
     height: inherit;
@@ -206,8 +205,8 @@
   display: none;
   @include mq(md) {
     display: flex;
-    justify-content: flex-end;
-    width: calc(486 / 863 * 100vw);
+    justify-content: flex-start;
+    width: calc(567 / 967 * 100vw);
     height: 100%;
   }
 }
@@ -230,7 +229,7 @@
 .p-header__phonenumber {
   @include mq(md) {
     color: $white;
-    width: calc(281 / 486 * 100%);
+    width: calc(263 / 567 * 100%);
   }
 }
 
@@ -275,7 +274,7 @@
 
 .p-header__phonenumber-hours {
   @include mq(md) {
-    font-size: calc(14 / 1440 * 100vw);
+    font-size: clamp(10px, calc(14 / 1440 * 100vw), 999px);
     line-height: calc(25 / 14);
     letter-spacing: .0;
   }
@@ -287,7 +286,7 @@
 -------------------------------------------*/
 .p-header__counseling {
   @include mq(md) {
-    width: calc(205 / 486 * 100%);
+    width: calc(205 / 1440 * 100vw);
   }
 }
 
@@ -304,7 +303,7 @@
       inset 0 2px 0 rgba(255, 255, 255, 0.4),
       inset 0 -4px 0 #439121;
     border: rem(1.5) solid $white;
-    font-size: calc(14 / 1440 * 100vw);
+    font-size: clamp(10px, calc(14 / 1440 * 100vw), 999px);
     line-height: calc(17 / 14);
     padding-block: rem(8);
     padding-right: rem(14);
