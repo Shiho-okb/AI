@@ -228,4 +228,10 @@ jQuery(function ($) {
   // リサイズ時
   window.addEventListener('resize', updateScrollbar);
 
+  // スクロールヒント
+  new ScrollHint('.js-table-scroll', {
+    i18n: {
+      scrollable: 'スクロールできます'
+    }
+  });
 });
