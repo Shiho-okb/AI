@@ -131,8 +131,8 @@ jQuery(function ($) {
   function setArcText() {
     const width = window.innerWidth;
 
-    // widthが768以上（PC）なら300、それ未満（SP）なら200
-    let radius = width >= 768 ? 300 : 200;
+    // widthが600以上なら300、それ未満なら200
+    let radius = width >= 600 ? 300 : 200;
     const $target = $('#js-arch');
 
     // 既に適用されている場合は一度リセット

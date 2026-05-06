@@ -82,7 +82,6 @@
   height: rem(58);
   background-color: $pink;
   border-radius: 999px;
-
   @include mq(md) {
     top: 56%;
     width: rem(2.8);
@@ -91,9 +90,9 @@
 }
 
 .p-effect__recommend-text::before {
-  left: rem(-22);
+  left: rem(-24);
   transform: translateY(-50%) rotate(-28deg);
-  box-shadow: 4px 2px 0 $pink;
+  box-shadow: clamp(4px, 1.5vw, 8px) clamp(2px, 0.6vw, 4px) 0 $pink;
   @include mq(md) {
     left: rem(-41);
     box-shadow: 8px 4px 0 $pink;
@@ -101,9 +100,9 @@
 }
 
 .p-effect__recommend-text::after {
-  right: rem(-20);
+  right: rem(-19);
   transform: translateY(-50%) rotate(28deg);
-  box-shadow: 4px -2px 0 $pink;
+  box-shadow: clamp(4px, 1.5vw, 8px) clamp(-2px, 0.6vw, -4px) 0 $pink;
   @include mq(md) {
     right: rem(-32);
     box-shadow: 8px -4px 0 $pink;
