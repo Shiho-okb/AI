@@ -319,6 +319,10 @@
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
 
+.p-header__counseling-btn a:hover::after {
+  transform: translateX(3px);
+}
+
 .p-header__counseling-btn a::before {
   @include mq(md) {
     content: "";
@@ -331,7 +335,7 @@
 
 .p-header__counseling-btn a::after {
   @include mq(md) {
-    right: clamp(6px, calc(2.08vw - 10px), 20px);
+    right: clamp(12px, calc(2.08vw - 10px), 20px);
     width: rem(14);
     height: rem(19);
   }
