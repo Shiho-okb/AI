@@ -120,6 +120,17 @@ jQuery(function ($) {
         fixedBtn.removeClass("is-show");
       }
     }
+
+    /* ===== マーカーアニメーション ===== */
+    $('.js-marker').each(function (i) {
+      const bPosition = $(this).offset().top;
+
+      if (wScroll > bPosition - wHeight + 150) {
+        setTimeout(() => {
+          $(this).addClass('is-active');
+        }, i * 150);
+      }
+    });
   }
 
   // 初期表示
