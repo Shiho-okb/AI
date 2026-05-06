@@ -53,7 +53,7 @@
 }
 
 .c-flow-card__num::before {
-  counter-increment: number 1;
+  // counter-increment: number 1;
   content: counter(flow, decimal-leading-zero);
 }
 
@@ -125,15 +125,5 @@
     border-right: rem(26) solid transparent;
     border-left: rem(26) solid transparent;
     border-top: rem(20) solid $pink;
-  }
-}
-
-.p-flow-card {
-  display: flex;
-  flex-direction: column;
-  gap: rem(46);
-  counter-reset: flow;
-  @include mq(md) {
-    gap: rem(53.5);
   }
 }

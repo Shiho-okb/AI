@@ -101,7 +101,7 @@ jQuery(function ($) {
       }
     });
 
-    // 追従ボタン用
+    /* ===== 追従ボタン ===== */
     const fixedBtn = $(".js-fixed");
     const footer = $(".js-footer");
 
@@ -129,6 +129,17 @@ jQuery(function ($) {
         setTimeout(() => {
           $(this).addClass('is-active');
         }, i * 150);
+      }
+    });
+
+    /* ===== フローカード ===== */
+    $('.p-flow-card').each(function (i) {
+      const bPosition = $(this).offset().top;
+
+      if (wScroll > bPosition - wHeight + 150) {
+        setTimeout(() => {
+          $(this).addClass('is-active');
+        }, i * 200);
       }
     });
   }
