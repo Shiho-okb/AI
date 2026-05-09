@@ -5,6 +5,7 @@
   background: $pink;
   color: $white;
   padding-block: rem(54) rem(117);
+  overflow-x: clip;
   @include mq(md) {
     padding-block: rem(123) rem(255);
   }

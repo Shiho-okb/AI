@@ -42,9 +42,9 @@
 .c-reason-card__body::after {
   content: "";
   position: absolute;
-  top: rem(-4);
-  width: 1px;
-  height: rem(4);
+  top: rem(-3.5);
+  width: rem(1);
+  height: rem(3.5);
   background: $pink02;
   z-index: 10;
   @include mq(md) {
@@ -63,7 +63,7 @@
 .c-reason-card__body::after {
   left: rem(134);
   @include mq(md) {
-    left: rem(216);
+    left: rem(214);
   }
 }
 
@@ -207,29 +207,37 @@
 偶数番目のカード
 -------------------------------------------*/
 .c-reason-card:nth-child(even) .c-reason-card__en {
-  left: rem(173);
+  left: auto;
+  right: rem(8);
   @include mq(md) {
     left: rem(17);
+    right: auto;
   }
 }
 
 .c-reason-card:nth-child(even) .c-reason-card__head {
-  left: rem(236);
+  left: auto;
+  right: rem(7);
   @include mq(md) {
     left: rem(117);
+    right: auto;
   }
 }
 
 .c-reason-card:nth-child(even) .c-reason-card__body::before {
-  left: rem(172);
+  left: auto;
+  right: rem(7);
   @include mq(md) {
     left: rem(16);
+    right: auto;
   }
 }
 
 .c-reason-card:nth-child(even) .c-reason-card__body::after {
-  left: rem(296);
+  left: auto;
+  right: rem(131);
   @include mq(md) {
     left: rem(216);
+    right: auto;
   }
 }
