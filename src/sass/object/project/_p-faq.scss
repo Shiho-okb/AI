@@ -10,7 +10,6 @@
 
 .p-faq::before {
   content: "";
-  display: block;
   position: absolute;
   top: rem(-30);
   right: 0;
@@ -28,7 +27,6 @@
 
 .p-faq::after {
   content: "";
-  display: block;
   position: absolute;
   bottom: rem(-1);
   left: 0;

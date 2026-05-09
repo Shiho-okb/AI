@@ -23,7 +23,6 @@
 
 .p-access__title::after {
   content: "";
-  display: block;
   position: absolute;
   bottom: rem(-8);
   left: 50%;
@@ -44,7 +43,6 @@
 
 .p-access::before {
   content: "";
-  display: block;
   position: absolute;
   top: rem(123);
   left: 0;
