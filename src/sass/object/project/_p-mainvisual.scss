@@ -210,7 +210,7 @@
   }
 }
 
-.p-mainvisual__fee .c-fee-card__month {
+.p-mainvisual__fee .c-monthly__month {
   margin: rem(11) 0 0 rem(11);
   @include mq(md) {
     font-size: rem(28);
@@ -218,7 +218,7 @@
   }
 }
 
-.p-mainvisual__fee .c-fee-card__amount {
+.p-mainvisual__fee .c-monthly__amount {
   font-size: rem(48);
   line-height: calc(70 / 48);
   @include mq(md) {
@@ -226,20 +226,20 @@
   }
 }
 
-.p-mainvisual__fee .c-fee-card__unit {
+.p-mainvisual__fee .c-monthly__unit {
   @include mq(md) {
     margin: 0 0 0 rem(19);
   }
 }
 
-.p-mainvisual__fee .c-fee-card__tax {
+.p-mainvisual__fee .c-monthly__tax {
   font-size: rem(8);
   @include mq(md) {
     font-size: rem(13);
   }
 }
 
-.p-mainvisual__fee .c-fee-card__yen {
+.p-mainvisual__fee .c-monthly__yen {
   font-size: rem(24);
   @include mq(md) {
     font-size: rem(36);
