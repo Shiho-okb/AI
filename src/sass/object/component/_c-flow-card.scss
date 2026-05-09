@@ -6,8 +6,6 @@
   padding-bottom: rem(10);
   border: rem(1) solid $yellow;
   counter-increment: flow;
-  @include mq(md) {
-  }
 }
 
 .c-flow-card__ribbon {
@@ -53,7 +51,6 @@
 }
 
 .c-flow-card__num::before {
-  // counter-increment: number 1;
   content: counter(flow, decimal-leading-zero);
 }
 
