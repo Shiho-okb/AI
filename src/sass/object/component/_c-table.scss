@@ -160,7 +160,6 @@ tr:last-child .c-table__highlight::after {
   width: rem(177);
   padding-block: rem(10) rem(7);
   padding-inline: rem(7);
-  // vertical-align: top;
   @include mq(md) {
     border: rem(5) solid #e8e8e8;
     width: rem(283);
