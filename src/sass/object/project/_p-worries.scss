@@ -126,7 +126,8 @@
 }
 
 .p-worries__item span {
-  background: linear-gradient($lightpink 0 0) no-repeat left bottom / 0% 40%;
+  background:
+      linear-gradient($lightpink, $lightpink) no-repeat left bottom / 0% 40%;
   transition: background-size 0.6s ease;
 }
 
