@@ -96,7 +96,7 @@ p-fee--second
   }
 }
 
-.p-fee--second .c-fee-card__lead--perfect {
+.p-fee--second .c-fee-card--perfect {
   @include mq(md) {
     margin-top: rem(20);
   }

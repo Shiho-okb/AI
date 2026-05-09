@@ -42,7 +42,7 @@
   }
 }
 
-.c-fee-card {
+.c-fee-card__box {
   border: rem(3) solid #c06a86;
   background-color: $lightpink02;
   border-radius: rem(15);
@@ -94,7 +94,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: rem(14);
+    margin-top: rem(15);
     gap: rem(13);
   }
 }
@@ -216,11 +216,11 @@
 /*-------------------------------------------
 2番目のカード
 -------------------------------------------*/
-.c-fee-card__lead--perfect {
+.c-fee-card--perfect {
   margin-top: rem(34);
 }
 
-.c-fee-card__lead--perfect::before {
+.c-fee-card--perfect .c-fee-card__lead::before {
   left: 18%;
   transform: translateY(-50%) rotate(-22deg);
   @include mq(md) {
@@ -228,7 +228,7 @@
   }
 }
 
-.c-fee-card__lead--perfect::after {
+.c-fee-card--perfect .c-fee-card__lead::after {
   right: 19%;
   transform: translateY(-50%) rotate(22deg);
   @include mq(md) {
@@ -236,7 +236,7 @@
   }
 }
 
-.c-fee-card--perfect {
+.c-fee-card--perfect .c-fee-card__box {
   border: rem(3) solid $blue;
   background-color: $lightblue02;
   @include mq(md) {
@@ -247,6 +247,7 @@
 .c-fee-card--perfect .c-fee-card__ribbon {
   background: $blue;
 }
+
 
 .c-fee-card--perfect .c-fee-card__tags {
   @include mq(md) {
@@ -260,11 +261,4 @@
 
 .c-fee-card--perfect .c-fee-card__monthly {
   color: $blue;
-}
-
-.p-fee-card {
-  @include mq(md) {
-    padding-left: rem(50);
-    padding-right: rem(50);
-  }
 }
