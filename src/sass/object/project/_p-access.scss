@@ -210,15 +210,16 @@
 
 .p-access__map {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .p-access__map iframe {
   border: none;
-  width: rem(345);
+  width: 100%;
   height: rem(200);
   margin-top: rem(17);
   @include mq(md) {
-    width: rem(1000);
     height: rem(450);
     margin-top: rem(23);
   }
